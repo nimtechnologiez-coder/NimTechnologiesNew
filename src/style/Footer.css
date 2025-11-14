@@ -1,0 +1,182 @@
+.footer-section {
+  background: linear-gradient(90deg, #a8edea 0%, #caf7e3 100%);
+  font-family: "Poppins", sans-serif;
+  color: #0c1e3b;
+}
+
+/* === Logos === */
+.footer-logo {
+  width: 140px;
+  height: auto;
+  display: block;
+  margin: 0 auto 15px;
+}
+
+/* === Company Info === */
+.footer-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #0c1e3b;
+}
+
+.footer-desc {
+  color: #333;
+  font-size: 0.95rem;
+  margin-top: 10px;
+  max-width: 380px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.highlight {
+  color: #00a693;
+}
+
+/* === Social Icons === */
+.footer-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #bdf5e7;
+  color: #0c1e3b;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  margin-right: 8px;
+  transition: all 0.3s ease;
+}
+
+.footer-icons a:hover {
+  background: #00a693;
+  color: #fff;
+}
+
+/* === Links === */
+.footer-heading {
+  font-weight: 700;
+  font-size: 1rem;
+  margin-bottom: 12px;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 0.95rem;
+  transition: 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #00a693;
+}
+
+/* === Contact Info === */
+.footer-contact {
+  list-style: none;
+  padding: 0;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.footer-contact li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+}
+
+.footer-contact svg {
+  color: #00a693;
+}
+
+/* === Divider === */
+.footer-divider {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+/* === Bottom Section === */
+.footer-policy {
+  color: #333;
+  font-size: 0.9rem;
+  margin-left: 15px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-policy:hover {
+  color: #00a693;
+}
+
+/* === Responsive Styling === */
+@media (max-width: 992px) {
+  .footer-section {
+    text-align: center;
+  }
+
+  .footer-title,
+  .footer-heading,
+  .footer-desc {
+    text-align: center;
+  }
+
+  .footer-contact li {
+    justify-content: center;
+  }
+
+  .footer-icons {
+    justify-content: center;
+  }
+
+  .footer-links {
+    text-align: center;
+  }
+
+  .footer-policy {
+    display: inline-block;
+    margin: 6px;
+  }
+
+  .footer-logo {
+    width: 120px;
+  }
+}
+
+@media (max-width: 576px) {
+  .footer-section {
+    text-align: center;
+  }
+
+  .footer-title {
+    font-size: 1.2rem;
+  }
+
+  .footer-desc {
+    font-size: 0.9rem;
+    margin: 0 auto;
+  }
+
+  .footer-policy {
+    font-size: 0.85rem;
+  }
+
+  .footer-icons a {
+    width: 32px;
+    height: 32px;
+    margin-right: 6px;
+  }
+
+  .footer-logo {
+    width: 110px;
+    margin-bottom: 10px;
+  }
+}

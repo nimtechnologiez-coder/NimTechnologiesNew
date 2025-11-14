@@ -1,0 +1,226 @@
+/* ===============================
+   MAIN WRAPPER
+=============================== */
+.fp-section {
+  background: #ffffff;
+  padding: 5rem 6%;
+  display: flex;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+  overflow: hidden;
+}
+
+.fp-container {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.fp-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 3rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* ===============================
+   LEFT SIDE – LOGO IMAGE
+=============================== */
+.fp-left {
+  flex: 1;
+  min-width: 320px;
+  text-align: center;
+}
+
+.fp-logo-img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  object-fit: contain;
+
+  /* smooth high quality render */
+  image-rendering: crisp-edges;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+
+  transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.fp-logo-img:hover {
+  transform: scale(1.08);
+  filter: drop-shadow(0 6px 18px rgba(0, 175, 150, 0.4));
+}
+
+/* ===============================
+   RIGHT SIDE – TEXT BLOCK
+=============================== */
+.fp-right {
+  flex: 1;
+  min-width: 320px;
+  text-align: left;
+}
+
+.fp-brand {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: #111;
+}
+
+.fp-n {
+  color: #00a693;
+  font-weight: 800;
+}
+
+.fp-book {
+  color: #007e6d;
+}
+
+.fp-heading {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 1rem 0;
+  color: #222;
+}
+
+.fp-highlight {
+  color: #00a693;
+}
+
+.fp-subtitle {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.fp-description {
+  line-height: 1.7;
+  color: #444;
+  max-width: 500px;
+  margin-bottom: 2rem;
+}
+
+/* ===============================
+   BUTTON
+=============================== */
+.fp-btn {
+  padding: 0.9rem 1.8rem;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #a7ede2, #00bfa6);
+
+  color: #111;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.fp-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 175, 150, 0.35);
+}
+
+.fp-arrow {
+  margin-left: 8px;
+  font-size: 1.2rem;
+}
+
+/* ===============================
+   RESPONSIVE — TABLET
+=============================== */
+@media (max-width: 992px) {
+  .fp-section {
+    padding: 4rem 5%;
+  }
+
+  .fp-top {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .fp-right {
+    text-align: center;
+  }
+
+  .fp-description {
+    margin: 0 auto 2rem;
+  }
+
+  .fp-logo-img {
+    max-width: 350px;
+  }
+}
+
+/* ===============================
+   RESPONSIVE — MEDIUM MOBILE
+=============================== */
+@media (max-width: 768px) {
+  .fp-logo-img {
+    max-width: 280px;
+  }
+
+  .fp-brand {
+    font-size: 2.2rem;
+  }
+
+  .fp-heading {
+    font-size: 1.6rem;
+  }
+
+  .fp-description {
+    font-size: 0.95rem;
+  }
+}
+
+/* ===============================
+   RESPONSIVE — SMALL MOBILE
+=============================== */
+@media (max-width: 480px) {
+  .fp-section {
+    padding: 3rem 4%;
+  }
+
+  .fp-logo-img {
+    max-width: 220px;
+  }
+
+  .fp-brand {
+    font-size: 1.8rem;
+  }
+
+  .fp-heading {
+    font-size: 1.4rem;
+  }
+
+  .fp-btn {
+    width: 85%;
+    font-size: 0.9rem;
+  }
+}
+
+/* ===============================
+   EXTRA SMALL (≤ 360px)
+=============================== */
+@media (max-width: 360px) {
+  .fp-logo-img {
+    max-width: 180px;
+  }
+
+  .fp-brand {
+    font-size: 1.6rem;
+  }
+
+  .fp-heading {
+    font-size: 1.2rem;
+  }
+
+  .fp-description {
+    font-size: 0.85rem;
+  }
+
+  .fp-btn {
+    width: 90%;
+  }
+}

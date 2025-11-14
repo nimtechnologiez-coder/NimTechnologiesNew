@@ -1,0 +1,175 @@
+/* ===================================== */
+/*         UNIQUE FEATURE SECTION        */
+/* ===================================== */
+.uniq-feature-section {
+  padding: 4rem 8%;
+  display: flex;
+  justify-content: center;
+}
+
+.uniq-feature-wrapper {
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* ===================================== */
+/*             FEATURE CARD              */
+/* ===================================== */
+.uniq-feature-card {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 35px 40px;
+  background: #ffffff;
+  border-radius: 24px;
+  gap: 40px;
+  height: 420px;             /* SAME HEIGHT for ALL CARDS */
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.10);
+  overflow: hidden;
+}
+
+.uniq-feature-btn {
+  padding: 10px 20px;         /* Smaller button */
+  background: #00bda6;
+  color: #fff;
+  border: none;
+  border-radius: 25px;        /* Softer curve */
+  font-size: 0.9rem;          /* Smaller text */
+  font-weight: 600;
+  width: fit-content;
+  min-width: 130px;           /* 🔥 Same width for all buttons */
+  height: 40px;               /* 🔥 Same height for all buttons */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  transition: 0.25s ease;
+}
+
+.uniq-feature-btn:hover {
+  background: #009e8c;
+  transform: translateY(-2px);
+}
+
+
+/* ===================================== */
+/*            IMAGE AREA                 */
+/* ===================================== */
+.uniq-feature-img-box {
+  width: 50%;
+  height: 100%;              /* Image area same height as card */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.uniq-feature-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;        /* NO ZOOM — FULL IMAGE */
+  border-radius: 20px;
+       /* Clean padding */
+  padding: 10px;              /* Keeps image shape consistent */
+
+}
+
+/* ===================================== */
+/*              CONTENT                  */
+/* ===================================== */
+.uniq-feature-content {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* Content vertically centered */
+  gap: 15px;
+}
+
+.uniq-feature-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #0b3b36;
+}
+
+.uniq-feature-desc {
+  font-size: 1rem;
+  line-height: 1.55;
+  color: #333;
+}
+
+.uniq-feature-btn {
+  padding: 12px 26px;
+  background: #00bda6;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.uniq-feature-btn:hover {
+  background: #009e8c;
+  transform: translateY(-2px);
+}
+
+/* ===================================== */
+/*                 DOTS                  */
+/* ===================================== */
+.uniq-feature-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 22px;
+  gap: 10px;
+}
+
+.uniq-feature-dot {
+  width: 12px;
+  height: 12px;
+  background: #d1d1d1;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.uniq-feature-dot.active {
+  background: #00bda6;
+  transform: scale(1.35);
+}
+
+/* ===================================== */
+/*               RESPONSIVE              */
+/* ===================================== */
+
+@media (max-width: 992px) {
+  .uniq-feature-card {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+  }
+
+  .uniq-feature-img-box {
+    width: 100%;
+    height: 260px;
+  }
+
+  .uniq-feature-img {
+    height: 100%;
+  }
+
+  .uniq-feature-content {
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .uniq-feature-img-box {
+    height: 220px;
+  }
+
+  .uniq-feature-title {
+    font-size: 1.4rem;
+  }
+}

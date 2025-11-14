@@ -1,0 +1,129 @@
+
+
+/* ====== Container ====== */
+.cn-register-container {
+  background: linear-gradient(to bottom, #ffffff, #e8efec);
+  width: 480px;
+  max-width: 90%;
+  margin: 40px auto;
+  padding: 40px 50px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.cn-register-title {
+  margin-bottom: 24px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #111;
+  text-align: left;
+}
+
+/* ====== Form ====== */
+.cn-register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.cn-name-fields {
+  display: flex;
+  gap: 14px;
+}
+
+.cn-register-form input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d8d8d8;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.cn-register-form input:focus {
+  border-color: #0078ff;
+}
+
+/* ====== Upload Button ====== */
+.cn-upload-wrapper {
+  margin-top: 6px;
+}
+
+.cn-upload-btn {
+  display: inline-block;
+  background: #fff;
+  border: 1px solid #d8d8d8;
+  color: #111;
+  padding: 10px 20px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cn-upload-btn:hover {
+  background: #f2f2f2;
+}
+
+/* =========================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================= */
+
+/* 📱 Small Devices (up to 480px) */
+@media (max-width: 480px) {
+  .cn-register-container {
+    width: 95%;
+    padding: 25px 20px;
+  }
+
+  .cn-register-title {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .cn-name-fields {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .cn-register-form input {
+    font-size: 0.9rem;
+    padding: 10px 12px;
+  }
+
+  .cn-upload-btn {
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+}
+
+/* 📲 Medium Devices (481px - 768px) */
+@media (max-width: 768px) {
+  .cn-register-container {
+    width: 85%;
+    padding: 30px;
+  }
+
+  .cn-name-fields {
+    flex-direction: column;
+  }
+
+  .cn-register-title {
+    text-align: center;
+  }
+
+  .cn-upload-btn {
+    width: 70%;
+  }
+}
+
+/* 💻 Large Tablets / Small Laptops */
+@media (max-width: 1024px) {
+  .cn-register-container {
+    width: 70%;
+  }
+}

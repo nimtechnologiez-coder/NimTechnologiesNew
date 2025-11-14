@@ -1,0 +1,155 @@
+/* 🌿 Base Variables */
+:root {
+  --teal-gradient: linear-gradient(to right, #75c9c8, #c6e9e7);
+  --teal-box: linear-gradient(to bottom right, #5cc2bd, #6ed5cf);
+  --text-dark: #000;
+  --text-muted: #333;
+}
+
+/* 🏗️ Section */
+.industries-empower {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  color: var(--text-dark);
+  padding: 40px 5%;
+}
+
+/* 🏷️ Header */
+.industries-empower-header {
+  text-align: center;
+  margin-bottom: 40px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.industries-empower-header h2 {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.industries-empower-header p {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--text-muted);
+}
+
+/* 🧱 Container */
+.industries-empower-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+/* 🟩 Card */
+.industries-empower-card {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  background: var(--teal-gradient);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.industries-empower-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* 🧾 Content */
+.industries-empower-content {
+  flex: 1;
+  padding: 25px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.industries-empower-content p {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* 🟦 Title Boxes */
+.industries-empower-title {
+  background: var(--teal-box);
+  padding: 25px;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: var(--text-dark);
+  text-align: center;
+}
+
+.industries-empower-title h3 {
+  font-size: 15px;
+  margin: 0;
+  line-height: 1.3;
+}
+
+/* 🌀 Rounded Corners */
+.industries-empower-title.left {
+  border-bottom-right-radius: 20px;
+}
+
+.industries-empower-title.right {
+  border-top-left-radius: 20px;
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 900px) {
+  .industries-empower-card {
+    flex-direction: column;
+  }
+
+  .industries-empower-title {
+    border-radius: 0;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    min-width: 100%;
+  }
+
+  .industries-empower-content {
+    padding: 20px;
+  }
+
+  .industries-empower-content p {
+    font-size: 14px;
+  }
+
+  .industries-empower-header h2 {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .industries-empower {
+    padding: 30px 5%;
+  }
+
+  .industries-empower-header h2 {
+    font-size: 20px;
+  }
+
+  .industries-empower-header p {
+    font-size: 13px;
+  }
+
+  .industries-empower-content p {
+    font-size: 13px;
+  }
+
+  .industries-empower-title h3 {
+    font-size: 14px;
+  }
+}

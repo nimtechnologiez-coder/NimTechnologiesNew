@@ -1,0 +1,113 @@
+/* ===============================
+   🌈 Data Quote Card Styling (Updated + Animated)
+   =============================== */
+
+html, body {
+  overflow-x: hidden; /* ✅ Prevent any horizontal scroll */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ---------- CONTAINER ---------- */
+.quote-card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  width: 100%;
+  background: #ffffff;
+  overflow: hidden; /* ✅ Prevent overflow from box-shadow or animation */
+}
+
+/* ---------- CARD ---------- */
+.quote-card {
+  background: linear-gradient(90deg, #ffffff 0%, #6be0d8 100%);
+  background-size: 200% 200%; /* Keeps the gradient flowing */
+  animation: gradientShift 3s linear infinite; /* ⚡ Constant speed, no delay */
+
+  padding: 40px 80px;
+  border-radius: 20px 60px 0px 20px;
+  box-shadow: 8px 10px 20px rgba(0, 128, 128, 0.35);
+  text-align: center;
+
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s, transform 0.9s, box-shadow 0.4s;
+}
+
+/* Keyframes for continuous gradient movement */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* When card enters view */
+.quote-card.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------- Hover Effect ---------- */
+.quote-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 10px 14px 25px rgba(0, 128, 128, 0.45);
+}
+
+/* ---------- TEXT ---------- */
+.quote-card h2 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.quote-card p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #000;
+}
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+@media (max-width: 992px) {
+  .quote-card {
+    padding: 30px 50px;
+    border-radius: 16px 40px 0px 16px;
+  }
+
+  .quote-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .quote-card p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .quote-card {
+    padding: 25px 30px;
+  }
+
+  .quote-card h2 {
+    font-size: 1.2rem;
+  }
+
+  .quote-card p {
+    font-size: 0.95rem;
+  }
+}

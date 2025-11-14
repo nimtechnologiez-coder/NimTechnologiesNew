@@ -1,0 +1,161 @@
+/* Main Wrapper */
+.industries-wrapper {
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+  padding: 50px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 45px;
+}
+
+/* Header */
+.industries-header {
+  text-align: center;
+  max-width: 900px;
+}
+
+.industries-header h2 {
+  font-size: 32px;
+  font-weight: 800;
+  color: #0b0b0b;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.industries-header p {
+  font-size: 16px;
+  color: #333;
+  line-height: 1.7;
+  max-width: 760px;
+  margin: auto;
+}
+
+/* Industry Card */
+.industry-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  max-width: 900px;
+  background: linear-gradient(90deg, #5fa7a3 0%, #b8d8d6 100%);
+  border-radius: 10px;
+  box-shadow: 4px 4px 0 #8cd0cc;
+  overflow: hidden;
+  min-height: 200px;
+  flex-wrap: nowrap;
+  opacity: 0;
+  transform: translateX(120px);
+  transition: all 0.8s ease;
+}
+
+/* Reverse layout */
+.industry-box.reverse {
+  flex-direction: row-reverse;
+  background: linear-gradient(90deg, #b8d8d6 0%, #5fa7a3 100%);
+  transform: translateX(-120px);
+}
+
+/* Animation */
+.industry-box.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Text Section */
+.industry-text {
+  flex: 1;
+  padding: 30px 40px;
+  display: flex;
+  align-items: center;
+}
+
+.industry-text p {
+  font-size: 16px;
+  color: #000;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.7;
+}
+
+/* Title Section */
+.industry-title-box {
+  width: 230px;
+  min-height: 200px;
+  background: linear-gradient(180deg, #2aa89c 0%, #5cc2bd 100%);
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  text-align: center;
+}
+
+/* Rounded corners */
+.industry-box:not(.reverse) .industry-title-box {
+  border-top-left-radius: 45px;
+}
+
+.industry-box.reverse .industry-title-box {
+  border-bottom-right-radius: 45px;
+}
+
+/* ---------------------------------------------
+   RESPONSIVE — SMALLEST TO LARGEST DEVICES
+----------------------------------------------*/
+
+/* TABLETS */
+@media (max-width: 1024px) {
+  .industry-box {
+    flex-direction: column !important;
+    min-height: auto;
+  }
+
+  .industry-title-box {
+    width: 100% !important;
+    min-height: 120px !important;
+    border-radius: 0 !important;
+  }
+
+  .industry-text {
+    padding: 25px;
+    text-align: center;
+  }
+}
+
+/* SMALL PHONES */
+@media (max-width: 600px) {
+  .industries-header h2 {
+    font-size: 26px;
+  }
+
+  .industries-header p {
+    font-size: 14px;
+  }
+
+  .industry-box {
+    box-shadow: 3px 3px 0 #8cd0cc;
+  }
+
+  .industry-title-box {
+    font-size: 15px;
+    padding: 20px 10px;
+  }
+
+  .industry-text p {
+    font-size: 14px;
+  }
+}
+
+/* EXTRA SMALL 0–360px */
+@media (max-width: 360px) {
+  .ndustry-title-box {
+    font-size: 14px;
+  }
+
+  .industry-text p {
+    font-size: 13px;
+  }
+}

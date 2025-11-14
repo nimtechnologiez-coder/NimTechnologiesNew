@@ -1,0 +1,456 @@
+/* ===================== COMMON STYLES ===================== */
+.partners-global-wrapper {
+  font-family: "Poppins", Arial, sans-serif;
+  background-color: #fff;
+  color: #111;
+  overflow-x: hidden;
+}
+
+/* ===================== PARTNERS SECTION ===================== */
+.partners-section {
+  text-align: center;
+  padding: 1rem 6%;
+}
+
+.partners-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.partners-title span {
+  color: #00a693;
+}
+
+.partners-subtitle {
+  font-size: 1.1rem;
+  color: #333;
+  max-width: 720px;
+  margin: 1rem auto 3.5rem;
+  line-height: 1.7;
+}
+
+/* Layout */
+.partners-content {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 6rem;
+  margin-top: 3rem;
+}
+
+/* LEFT SEMI-CIRCLE */
+.partners-left {
+  position: relative;
+  width: 540px;
+  height: 540px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.outer-circle {
+  position: relative;
+  width: 550px;
+  height: 530px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 210deg at 50% 50%,
+    #00bfa6 0deg,
+    #bdf5ec 180deg,
+    transparent 270deg
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.circle-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 75%, 0% 100%);
+}
+
+.inner-circle {
+  position: absolute;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* RIGHT CONTENT */
+.partners-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  gap: 1.8rem;
+  margin-top: 1.5rem;
+  padding-left: 160px;
+}
+
+.partner-btn {
+  align-self: flex-end;
+  margin-bottom: 2rem;
+  padding: 1rem 2rem;
+  border: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  background: linear-gradient(90deg, #e0fdfa, #a7ede2);
+  color: #000;
+  border-radius: 10px;
+  box-shadow: 2px 3px 0px 2px #00a693;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.partner-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Stat Boxes */
+.stats-box {
+  background: linear-gradient(180deg, #7df1d0, #00bfa6);
+  border-radius: 15px;
+  padding: 1.4rem 2rem;
+  box-shadow: 6px 6px 0px #bffcf6;
+  text-align: left;
+  color: #000;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stats-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 8px 8px 0px #bffcf6;
+}
+
+.stats-box h3 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0c0c0c;
+}
+
+.stats-box p {
+  margin: 8px 0 0;
+  font-size: 1rem;
+  color: #1d1d1d;
+}
+
+.mid-box {
+  width: 250px;
+  padding: 2rem 2.4rem;
+}
+
+.top-box {
+  width: 190px;
+}
+
+.bottom-box {
+  width: 170px;
+}
+
+/* ===================== GLOBAL FOOTPRINT SECTION ===================== */
+.global-section {
+  text-align: center;
+  margin-top: 1rem;
+  padding: 1rem 6%;
+}
+
+.global-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.global-title span {
+  color: #00a693;
+}
+
+.highlight {
+  color: #009a80;
+}
+
+.global-subtitle {
+  font-size: 1.1rem;
+  color: #333;
+  max-width: 680px;
+  margin: 0 auto 3rem;
+  line-height: 1.7;
+}
+
+/* Map */
+.map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120%;
+  margin-bottom: 3rem;
+}
+
+.world-map {
+  width: 100;
+  max-width: 950px;
+  height: auto;
+  object-fit: contain;
+  opacity: 0.95;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.world-map:hover {
+  transform: scale(1.03);
+  opacity: 1;
+}
+
+/* Stats */
+.stats-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.stats-card {
+  background: linear-gradient(180deg, #b2f4e5 0%, #00bfa6 100%);
+  width: 190px;
+  padding: 1.5rem 1.2rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.stats-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.stats-card h3 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.stats-card p {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
+/* ===================== RESPONSIVE ===================== */
+
+/* ===== Tablets ===== */
+@media (max-width: 1024px) {
+  .partners-content {
+    gap: 3rem;
+  }
+
+  .partners-right {
+    align-items: center;
+    padding-left: 0;
+  }
+
+  .partner-btn {
+    align-self: center;
+  }
+}
+
+/* ===== Mobile Landscape / Medium Phones ===== */
+@media (max-width: 768px) {
+  .partners-section {
+    padding: 4rem 4%;
+  }
+
+  .partners-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .partners-left {
+    width: 400px;
+    height: 400px;
+  }
+
+  .outer-circle {
+    width: 400px;
+    height: 400px;
+  }
+
+  .inner-circle {
+    width: 200px;
+    height: 200px;
+  }
+
+  .partners-right {
+    align-items: center;
+    text-align: center;
+    gap: 1.5rem;
+    padding-left: 0;
+  }
+
+  .partners-title {
+    font-size: 2rem;
+  }
+
+  .partners-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .global-title {
+    font-size: 2rem;
+  }
+
+  .global-subtitle {
+    font-size: 1rem;
+  }
+
+  .world-map {
+    width: 90%;
+    max-width: 700px;
+  }
+}
+
+/* ===== Small Phones (≤480px) ===== */
+@media (max-width: 480px) {
+  .partners-section {
+    padding: 3rem 3%;
+  }
+
+  .partners-title {
+    font-size: 1.8rem;
+  }
+
+  .partners-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+  }
+
+  .partners-left {
+    width: 280px;
+    height: 280px;
+  }
+
+  .outer-circle {
+    width: 280px;
+    height: 280px;
+  }
+
+  .inner-circle {
+    width: 140px;
+    height: 140px;
+  }
+
+  .partners-right {
+    align-items: center;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  .partner-btn {
+    width: 80%;
+    font-size: 1rem;
+    padding: 0.9rem 1.5rem;
+  }
+
+  .stats-box,
+  .mid-box,
+  .bottom-box,
+  .top-box {
+    width: 85%;
+    max-width: 260px;
+  }
+
+  .stats-box h3 {
+    font-size: 1.4rem;
+  }
+
+  .stats-box p {
+    font-size: 0.85rem;
+  }
+
+  /* ===== Global Section Mobile ===== */
+  .global-section {
+    padding: 1rem 3%;
+    margin-top: 3rem;
+  }
+
+  .global-title {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+
+  .global-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+  }
+
+  /* === FIXED CENTERED WORLD MAP === */
+  .map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    width: 110%;
+  }
+
+  .world-map {
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    object-fit: contain;
+    opacity: 0.95;
+    transform: scale(1);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+  }
+
+  .world-map:hover {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+
+  .stats-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .stats-card {
+    width: 85%;
+    max-width: 260px;
+    padding: 1.2rem 1rem;
+  }
+
+  .stats-card h3 {
+    font-size: 1.6rem;
+  }
+
+  .stats-card p {
+    font-size: 0.9rem;
+  }
+}

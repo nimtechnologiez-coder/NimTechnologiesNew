@@ -1,0 +1,226 @@
+.talent-join-section {
+  background: #fff;
+  padding: 48px 0 38px 0;
+  text-align: center;
+}
+
+.talent-heading {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-size: 2.7rem;
+  font-weight: 800;
+  margin: 0 0 22px 0;
+  color: #111;
+  letter-spacing: 0.01em;
+}
+
+.talent-subtext {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 48px;
+  line-height: 1.45;
+  max-width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.talent-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+  width: 100%;
+}
+
+.talent-form-row {
+  display: flex;
+  justify-content: center;
+  gap: 38px;
+  width: 100%;
+  margin-bottom: 24px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 350px;
+  max-width: 95vw;
+}
+
+.input-group label {
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  font-size: 1.15rem;
+  color: #454545;
+  margin-bottom: 11px;
+  letter-spacing: 0.01em;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 13px 20px;
+  font-size: 1.13rem;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  border: 4px solid #107399;
+  border-radius: 12px;
+  outline: none;
+  background: #fff;
+  color: #333;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.input-group input:focus {
+  border-color: #219ea7;
+}
+
+.talent-btn {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  background: #217871;
+  color: #fff;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 1.13rem;
+  padding: 12px 56px;
+  border: none;
+  border-radius: 23px;
+  box-shadow: 0 2px 12px rgba(30, 80, 76, 0.13);
+  cursor: pointer;
+  transition: background 0.19s, box-shadow 0.19s;
+}
+
+.talent-btn:hover {
+  background: #139080;
+  box-shadow: 0 4px 18px rgba(30, 80, 76, 0.15);
+}
+
+/* ===============================
+   💻 RESPONSIVE BREAKPOINTS
+   =============================== */
+
+/* 🖥️ Desktop (≥1200px) */
+@media (min-width: 1200px) {
+  .talent-heading {
+    font-size: 3rem;
+  }
+  .talent-subtext {
+    font-size: 1.4rem;
+  }
+  .input-group {
+    width: 400px;
+  }
+}
+
+/* 💻 Laptop (1025px–1199px) */
+@media (max-width: 1199px) and (min-width: 1025px) {
+  .talent-heading {
+    font-size: 2.5rem;
+  }
+  .talent-subtext {
+    font-size: 1.25rem;
+    max-width: 600px;
+  }
+  .talent-form-row {
+    gap: 30px;
+  }
+  .input-group {
+    width: 300px;
+  }
+}
+
+/* 📲 Tablet (769px–1024px) */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .talent-join-section {
+    padding: 40px 5vw 30px 5vw;
+  }
+  .talent-heading {
+    font-size: 2.1rem;
+    margin-bottom: 18px;
+  }
+  .talent-subtext {
+    font-size: 1.1rem;
+    margin-bottom: 32px;
+  }
+  .talent-form-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+  .input-group {
+    width: 80%;
+    max-width: 500px;
+  }
+  .talent-btn {
+    font-size: 1.05rem;
+    padding: 12px 45px;
+  }
+}
+
+/* 📱 Mobile (≤768px) */
+@media (max-width: 768px) {
+  .talent-join-section {
+    padding: 30px 4vw 23px 4vw;
+  }
+  .talent-heading {
+    font-size: 1.75rem;
+    margin-bottom: 10px;
+  }
+  .talent-subtext {
+    font-size: 1rem;
+    line-height: 1.4;
+    margin-bottom: 25px;
+  }
+  .talent-form-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+  }
+  .input-group {
+    width: 100%;
+    max-width: 95vw;
+  }
+  .input-group label {
+    font-size: 1rem;
+  }
+  .input-group input {
+    font-size: 1rem;
+    padding: 12px 18px;
+  }
+  .talent-btn {
+    width: 90%;
+    max-width: 260px;
+    font-size: 1rem;
+    padding: 12px 0;
+    border-radius: 18px;
+  }
+}
+
+/* 📱 Small Mobile (≤480px) */
+@media (max-width: 480px) {
+  .talent-heading {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+  .talent-subtext {
+    font-size: 0.9rem;
+    margin-bottom: 18px;
+  }
+  .input-group label {
+    font-size: 0.95rem;
+  }
+  .input-group input {
+    font-size: 0.9rem;
+    padding: 10px 15px;
+  }
+  .talent-btn {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 10px 0;
+    border-radius: 16px;
+  }
+}

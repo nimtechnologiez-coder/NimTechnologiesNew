@@ -1,0 +1,105 @@
+.careers-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ====== CONTENT WRAPPER ====== */
+.careers-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  z-index: 3;
+}
+
+/* ====== CAREERS BUTTON IMAGE ====== */
+.careers-button {
+  width: 180px;
+  height: 40px;
+  margin-bottom: 25px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.careers-button:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* ====== HEADING TEXT ====== */
+.careers-content h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #ffffff;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  margin: 0;
+}
+
+/* ===============================
+   📱 RESPONSIVE DESIGN
+   =============================== */
+
+/* Desktop: ≥ 1200px */
+@media (min-width: 1200px) {
+  .careers-hero {
+    height: 100vh;
+  }
+  .careers-content h1 {
+    font-size: 2.8rem;
+  }
+  .careers-button {
+    width: 180px;
+  }
+}
+
+/* Laptop: 1025px–1199px */
+@media (max-width: 1199px) and (min-width: 1025px) {
+  .careers-hero {
+    height: 95vh;
+  }
+  .careers-content h1 {
+    font-size: 2.3rem;
+  }
+  .careers-button {
+    width: 160px;
+  }
+}
+
+/* Tablet: 769px–1024px */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .careers-hero {
+    height: 85vh;
+  }
+  .careers-content h1 {
+    font-size: 2rem;
+  }
+  .careers-button {
+    width: 145px;
+  }
+}
+
+/* Mobile: ≤ 768px */
+@media (max-width: 768px) {
+  .careers-hero {
+    height: 100vh;
+  }
+  .careers-content h1 {
+    font-size: 1.5rem;
+  }
+  .careers-button {
+    width: 120px;
+    height: 36px;
+  }
+}
+

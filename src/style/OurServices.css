@@ -1,0 +1,225 @@
+/* ===============================
+   MAIN SECTION
+=============================== */
+.os-section {
+  background-color: #eafcfc;
+  padding: 5rem 8%;
+  text-align: center;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.os-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ===============================
+   TOP CARDS ROW
+=============================== */
+.os-card-row {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+.os-card {
+  flex: 1 1 300px;
+  max-width: 360px;
+  background: linear-gradient(to bottom, #a1dedb, #ffffff);
+  border-radius: 20px;
+  padding: 2.5rem 1.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.os-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.os-number {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #006d77;
+  margin-bottom: 0.5rem;
+}
+
+.os-text {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #222;
+}
+
+/* ===============================
+   TITLE + ROBOT IMAGE
+=============================== */
+.os-title-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  position: relative;
+  margin-bottom: 2rem;
+  padding-left: 100px;
+}
+
+.os-title {
+  background-color: #bffcf6;
+  color: #000;
+  padding: 10px 10px;
+  border-radius: 30px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  box-shadow: 0 3px 0 #b8b8b8;
+}
+
+.os-robot {
+  width: 230px;
+  height: auto;
+  padding-right: 50px;
+}
+
+/* ===============================
+   DESCRIPTION CONTENT
+=============================== */
+.os-description {
+  margin-top: 1rem;
+}
+
+.os-heading {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #002b36;
+  margin-bottom: 1rem;
+}
+
+.os-highlight {
+  color: #0d9488;
+  font-weight: 700;
+}
+
+.os-subtext {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* ===============================
+   RESPONSIVE — Laptop (1024px)
+=============================== */
+@media (max-width: 1024px) {
+
+  .os-card {
+    flex: 1 1 280px;
+    max-width: 320px;
+    padding: 2rem 1.2rem;
+  }
+
+  .os-title {
+    font-size: 1.3rem;
+  }
+
+  .os-heading {
+    font-size: 1.5rem;
+  }
+
+  .os-robot {
+    width: 180px;
+  }
+}
+
+/* ===============================
+   RESPONSIVE — Tablet (768px)
+=============================== */
+@media (max-width: 768px) {
+  .os-section {
+    padding: 4rem 5%;
+  }
+
+  .os-card-row {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .os-card {
+    width: 90%;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+  }
+
+  .os-title {
+    font-size: 1.2rem;
+  }
+
+  .os-robot {
+    width: 140px;
+    padding-right: 10px;
+  }
+
+  .os-heading {
+    font-size: 1.3rem;
+  }
+
+  .os-subtext {
+    font-size: 0.95rem;
+  }
+}
+
+/* ===============================
+   RESPONSIVE — Small Phones (480px)
+=============================== */
+@media (max-width: 480px) {
+  .os-card {
+    width: 85%;
+    padding: 1.5rem 1rem;
+  }
+
+  .os-number {
+    font-size: 1.7rem;
+  }
+
+  .os-text {
+    font-size: 0.95rem;
+  }
+
+  .os-title {
+    font-size: 1.1rem;
+  }
+
+  .os-heading {
+    font-size: 1.2rem;
+  }
+
+  .os-robot {
+    width: 120px;
+    padding-right: 0px;
+  }
+}
+
+/* ===============================
+   EXTRA SMALL (360px)
+=============================== */
+@media (max-width: 360px) {
+  .os-card {
+    width: 92%;
+  }
+
+  .os-robot {
+    width: 95px;
+  }
+
+  .os-heading {
+    font-size: 1.1rem;
+  }
+
+  .os-subtext {
+    font-size: 0.85rem;
+  }
+}

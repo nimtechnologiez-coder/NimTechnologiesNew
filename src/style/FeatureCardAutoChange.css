@@ -1,0 +1,167 @@
+/* ===== Section Container ===== */
+.feature-section {
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 8%;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+/* ===== Wrapper ===== */
+.feature-wrapper {
+  max-width: 1100px;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+/* ===== Card ===== */
+.feature-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  border: 1.5px solid #0d9488;
+  border-radius: 20px;
+  background-color: #ffffff;
+  padding: 2rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Image ===== */
+.feature-image-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.feature-image {
+  width: 90%;
+  max-width: 400px;
+  border-radius: 12px;
+}
+
+/* ===== Content ===== */
+.feature-content {
+  flex: 1;
+  text-align: left;
+}
+
+.feature-title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #0d9488;
+  margin-bottom: 1rem;
+}
+
+.feature-description {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 1.5rem;
+}
+
+.feature-btn {
+  background-color: #0d9488;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.feature-btn:hover {
+  background-color: #0b7b72;
+  transform: translateY(-3px);
+}
+
+/* ===== Dots ===== */
+.feature-dots {
+  text-align: center;
+  margin-top: 1.8rem;
+}
+
+.dot {
+  display: inline-block;
+  width: 35px;
+  height: 4px;
+  border-radius: 10px;
+  background-color: #a7e9e2;
+  margin: 0 5px;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background-color: #0d9488;
+  width: 50px;
+}
+
+/* ===== Tablet View ===== */
+@media (max-width: 1024px) {
+  .feature-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 1.5rem;
+  }
+
+  .feature-image {
+    width: 75%;
+  }
+
+  .feature-content {
+    text-align: center;
+  }
+}
+
+/* ===== Mobile View ===== */
+@media (max-width: 768px) {
+  .feature-section {
+    padding: 3.5rem 5%;
+  }
+
+  .feature-title {
+    font-size: 1.4rem;
+  }
+
+  .feature-description {
+    font-size: 0.95rem;
+  }
+
+  .feature-btn {
+    font-size: 0.95rem;
+    padding: 10px 20px;
+  }
+
+  .dot {
+    width: 25px;
+    height: 4px;
+  }
+
+  .dot.active {
+    width: 35px;
+  }
+}
+
+/* ===== Small Phones ===== */
+@media (max-width: 480px) {
+  .feature-image {
+    width: 100%;
+  }
+
+  .feature-card {
+    padding: 1.5rem;
+  }
+
+  .feature-title {
+    font-size: 1.2rem;
+  }
+
+  .feature-description {
+    font-size: 0.9rem;
+  }
+}

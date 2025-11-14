@@ -1,0 +1,151 @@
+.howitworks-section {
+  background: #ffffff;
+  padding: 80px 8%;
+  position: relative;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.howitworks-title {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #0e2a47;
+  margin-bottom: 100px;
+}
+
+/* ---------- TIMELINE CONTAINER ---------- */
+/* .timelinee-container {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+} */
+
+/* Vertical teal line */
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: #00b7b0;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* ---------- TIMELINE ITEM ---------- */
+.timeline-item {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  z-index: 2;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* When visible */
+.timeline-item.in-view {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ---------- LEFT SIDE ITEMS ---------- */
+.timeline-item.left {
+  flex-direction: row;
+  transform: translateX(-100px);
+}
+
+.timeline-item.left.in-view {
+  transform: translateX(0);
+}
+
+.timeline-item.left .timeline-content {
+  text-align: right;
+  width: 45%;
+  padding-right: 50px;
+}
+
+/* ---------- RIGHT SIDE ITEMS ---------- */
+.timeline-item.right {
+  flex-direction: row-reverse;
+}
+
+.timeline-item.right .timeline-content {
+  text-align: left;
+  width: 45%;
+  padding-left: 50px;
+}
+
+/* ---------- TIMELINE DOT ---------- */
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 14px;
+  height: 14px;
+  background: #00b7b0;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  z-index: 3;
+  box-shadow: 0 0 6px rgba(0, 183, 176, 0.4);
+  top: 8px;
+}
+
+/* ---------- CONTENT STYLING ---------- */
+.timeline-content h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1b213b;
+  margin-bottom: 10px;
+}
+
+.timeline-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.timeline-content li {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 6px;
+}
+
+/* ---------- RESPONSIVE DESIGN ---------- */
+@media (max-width: 992px) {
+  .timeline-line {
+    left: 20px;
+    transform: none;
+  }
+
+  .timeline-dot {
+    left: 20px;
+    transform: none;
+  }
+
+  .timeline-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .timeline-content {
+    width: 100% !important;
+    text-align: left !important;
+    padding-left: 50px !important;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right {
+    transform: translateX(50px);
+  }
+
+  .timeline-item.in-view {
+    transform: translateX(0);
+  }
+}

@@ -1,0 +1,274 @@
+/* ===== Global Wrapper ===== */
+.academy-case-wrapper {
+  background-color: #ffffff;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+/* ================= Nim Academy Section ================= */
+.academy-section {
+  padding: 4rem 8%;
+  text-align: center;
+}
+
+.academy-header {
+  margin-bottom: 3rem;
+}
+
+.academy-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 1rem;
+}
+
+.highlight-blue {
+  color: #1ec5b3;
+}
+
+.highlight-green {
+  color: #7df51a;
+}
+
+.highlight-dark {
+  color: #004080;
+}
+
+.academy-subtitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 1.2rem;
+}
+
+.academy-description {
+  color: #222;
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+/* ===== Feature Card Styling ===== */
+.academy-feature-card {
+  background: linear-gradient(to bottom, #e8f1ff, #2e86de);
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  max-width: 1000px;
+  margin: 3rem auto 0;
+  border: 1.5px solid #3ca6e8;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  color: #fff;
+}
+
+.feature-inner {
+  background: linear-gradient(to bottom, #f0f6ff, #2e86de);
+  border-radius: 15px;
+  padding: 2.5rem 2rem;
+  box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.feature-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #003366;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+.feature-green {
+  color: #7df51a;
+}
+
+.feature-subtext {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 1rem 0 2rem 0;
+}
+
+/* ===== Buttons ===== */
+.feature-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.feature-btn {
+  background-color: #0049b7;
+  color: #baff00;
+  font-weight: 700;
+  border: none;
+  border-radius: 12px;
+  padding: 0.9rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.feature-btn:hover {
+  background-color: #013b96;
+  transform: translateY(-3px);
+}
+
+/* ================= Case Studies ================= */
+.case-section {
+  padding: 2rem 8%;
+  text-align: center;
+}
+
+.case-header {
+  margin-bottom: 3rem;
+}
+
+.case-tag {
+  display: inline-block;
+  background: linear-gradient(135deg, #1ec5b3, #0aa0a0);
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 14px 32px;
+  border-radius: 50px;
+  box-shadow: 0 6px 20px rgba(30, 197, 179, 0.4);
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Add smooth glowing hover */
+.case-tag::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255, 255, 255, 0.35),
+    transparent
+  );
+  transition: all 0.6s ease;
+}
+
+.case-tag:hover::before {
+  left: 100%;
+}
+
+
+
+
+.case-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 1rem;
+}
+
+.highlight {
+  color: #1ec5b3;
+}
+
+.case-subtext {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.7;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ===== Case Grid ===== */
+.case-grid {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 3rem;
+}
+/* ===== Animation Overflow Fix ===== */
+.motion-clip {
+  overflow: hidden;
+}
+
+/* Global Wrapper Fix */
+.academy-case-wrapper {
+  background-color: #ffffff;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+/* ===== Case Card (Exact Screenshot Style) ===== */
+.case-card {
+  flex: 1 1 300px;
+  max-width: 350px;
+  height: 450px;
+  background-color: #ffffff;
+  border-radius: 0 0 40px 0;
+  border: 1.5px solid #1ec5b3;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  text-align: left;
+  transition: all 0.4s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.case-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+.case-image {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.case-content {
+  flex: 1;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.case-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 0.8rem;
+}
+
+.case-description {
+  font-size: 0.95rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 768px) {
+  .feature-buttons {
+    flex-direction: column;
+  }
+
+  .feature-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .case-card {
+    max-width: 90%;
+    height: auto;
+  }
+
+ 
+}

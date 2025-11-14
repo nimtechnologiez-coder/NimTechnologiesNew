@@ -1,0 +1,199 @@
+/* Base Container */
+.nimAI-container {
+  font-family: "Poppins", sans-serif;
+  background-color: #fff;
+  color: #111;
+}
+
+/* Header */
+.nimAI-header {
+  text-align: center;
+  padding: 5px 5% 50px;
+}
+
+.nimAI-header-badge {
+  display: inline-block;
+  background-color: #e3f9f6;
+  color: #083b39;
+  font-weight: 800;
+  padding: 20px 50px;
+  border-radius: 50px;
+  font-size: 1.5rem;
+  letter-spacing: 0.5px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.nimAI-header-badge:hover {
+  transform: scale(1.05);
+  background-color: #d3f4ee;
+}
+
+.nimAI-header-badge span {
+  color: #009688;
+  font-weight: 900;
+}
+
+.nimAI-header-desc {
+  font-size: 1.35rem;
+  color: #333;
+  margin-top: 25px;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+.nimAI-header-desc span {
+  color: #009688;
+}
+
+/* Services Container */
+.nimAI-service-section {
+  width: 100%;
+  padding: 5px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 80px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Reverse layout */
+.nimAI-reverse-layout {
+  flex-direction: row-reverse;
+}
+
+/* Image Area */
+.nimAI-image-container {
+  flex: 1;
+  min-width: 320px;
+  max-width: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nimAI-image {
+  width: 100%;
+  border-radius: 25px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.nimAI-image:hover {
+  transform: translateY(-8px) scale(1.04);
+}
+
+/* Text Content */
+.nimAI-content {
+  flex: 1;
+  min-width: 350px;
+  max-width: 650px;
+  padding: 20px 15px;
+}
+
+.nimAI-content h3 {
+  font-size: 2.1rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.nimAI-content p {
+  font-size: 1.2rem;
+  line-height: 1.9;
+  margin-bottom: 35px;
+}
+
+/* Button */
+.nimAI-btn {
+  background: linear-gradient(90deg, #0d6b5d, #009688);
+  color: #fff;
+  border: none;
+  padding: 14px 36px;
+  font-weight: 600;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+}
+
+.nimAI-btn:hover {
+  background: linear-gradient(90deg, #0b5c51, #008b7a);
+  transform: translateY(-3px);
+}
+
+/* Scroll Animations */
+.nimAI-fade-slide .nimAI-slide-right,
+.nimAI-fade-slide .nimAI-slide-left {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 1s ease-in-out;
+}
+
+.nimAI-fade-slide .nimAI-slide-right {
+  transform: translateX(80px);
+}
+
+.nimAI-reverse-layout .nimAI-slide-left {
+  transform: translateX(-80px);
+}
+
+.nimAI-visible .nimAI-slide-right,
+.nimAI-visible .nimAI-slide-left {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .nimAI-service-section {
+    flex-direction: column;
+    text-align: center;
+    gap: 60px;
+    padding: 70px 6%;
+  }
+
+  .nimAI-image-container {
+    max-width: 420px;
+  }
+
+  .nimAI-content h3 {
+    font-size: 1.8rem;
+  }
+
+  .nimAI-content p {
+    font-size: 1.05rem;
+  }
+
+  .nimAI-header-desc {
+    font-size: 1.15rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .nimAI-service-section {
+    padding: 20px 5%;
+    gap: 45px;
+  }
+
+  .nimAI-image-container {
+    max-width: 340px;
+  }
+
+  .nimAI-content h3 {
+    font-size: 1.5rem;
+  }
+.nimAI-container{
+  margin-bottom: 60px;
+}
+  .nimAI-content p {
+    font-size: 0.95rem;
+  }
+
+  .nimAI-header-badge {
+    font-size: 1rem;
+    padding: 8px 22px;
+  }
+}

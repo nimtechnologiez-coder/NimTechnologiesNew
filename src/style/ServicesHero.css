@@ -1,0 +1,126 @@
+/* ===============================
+   🌟 CAREERS HERO SECTION
+   =============================== */
+.career-hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Align content to the right */
+  font-family: "Poppins", sans-serif;
+  padding-right: 6vw; /* Space from right edge, adjusts on small screens */
+}
+ 
+/* ====== CONTENT WRAPPER ====== */
+.career-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align text and button to the right */
+  justify-content: center;
+  text-align: right;
+  z-index: 3;
+  width: 100%;
+  max-width: 640px; /* Prevents excessive width */
+  gap: 18px;
+}
+ 
+/* ====== CAREERS BUTTON IMAGE ====== */
+ 
+ 
+.career-button:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+ 
+/* ====== HEADING TEXT ====== */
+.career-content h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  line-height: 1.3;
+  color: #ffffff;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  margin: 0;
+}
+ 
+/* ===============================
+   📱 RESPONSIVE DESIGN
+   =============================== */
+ 
+/* Desktop: ≥ 1200px */
+@media (min-width: 1200px) {
+  .career-hero {
+    padding-right: 6vw;
+    height: 100vh;
+  }
+  .career-content h1 {
+    font-size: 2.8rem;
+    margin-right: 80px;
+   
+  }
+  .career-button {
+    width: 180px;
+    margin-right: 60px;
+       
+  }
+}
+ 
+/* Laptop: 1025px–1199px */
+@media (max-width: 1199px) and (min-width: 1025px) {
+  .career-hero {
+    padding-right: 4vw;
+    height: 95vh;
+   
+  }
+  .career-content h1 {
+    font-size: 2.3rem;
+    margin-right: 100px;
+  }
+  .career-button {
+    width: 160px;
+   
+  }
+}
+ 
+/* Tablet: 769px–1024px */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .career-hero {
+    padding-right: 3vw;
+    height: 85vh;
+  }
+  .career-content h1 {
+    font-size: 2rem;
+  }
+  .career-button {
+    width: 145px;
+  }
+}
+ 
+/* Mobile: ≤ 768px */
+@media (max-width: 768px) {
+  .career-hero {
+    justify-content: center;
+    padding: 0 4vw;
+    height: 100vh;
+  }
+  .career-content {
+    align-items: center;
+    text-align: end;
+    max-width: 100%;
+  }
+  .career-content h1 {
+    font-size: 1.5rem;
+  }
+  .career-button {
+    width: 120px;
+    height: 36px;
+    margin-top:180px ;
+  }
+}
+ 
+ 

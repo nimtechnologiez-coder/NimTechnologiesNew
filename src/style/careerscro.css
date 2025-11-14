@@ -1,0 +1,103 @@
+.cro-section {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 50px;
+  font-family: "Poppins", sans-serif;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* ====== HEADINGS ====== */
+.cro-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #0a192f;
+  margin-bottom: 10px;
+}
+
+.cro-location,
+.cro-department {
+  font-size: 1.05rem;
+  color: #475569;
+  margin-bottom: 5px;
+  font-weight: 500;
+  text-align: justify;
+}
+
+/* ====== SECTION HEADERS ====== */
+.cro-summary-heading,
+.cro-resp-heading {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #0a192f;
+  margin-top: 30px;
+  margin-bottom: 10px;
+    text-align: justify;
+
+}
+
+/* ====== SUMMARY TEXT ====== */
+.cro-summary {
+  font-size: 1.05rem;
+  color: #334155;
+  line-height: 1.7;
+  margin-bottom: 20px;
+    text-align: justify;
+
+}
+
+/* ====== RESPONSIBILITIES ====== */
+.cro-resp-list {
+  list-style: disc;
+  padding-left: 25px;
+  color: #334155;
+  line-height: 1.7;
+  margin-bottom: 40px;
+    text-align: justify;
+
+}
+
+/* ====== APPLY BUTTON ====== */
+.cro-apply-btn {
+  background: linear-gradient(180deg, #eef9f7 0%, #c3e8e3 55%, #78c7ba 100%);
+  color: #203737;
+  font-family: 'Montserrat', 'Poppins', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 1.08rem;
+  padding: 10px 35px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow:
+    0 2px 8px rgba(126,156,148,0.09),
+    inset 0 1px 9px rgba(255,255,255,0.75);
+  text-shadow: 0 1px 1px rgba(255,255,255,0.55);
+  transition: all 0.2s ease;
+}
+
+.cro-apply-btn:hover {
+  background: linear-gradient(180deg, #def3f0 0%, #a6ddd5 62%, #4bb1a3 100%);
+  transform: translateY(-2px);
+  box-shadow:
+    0 4px 14px rgba(126,156,148,0.18),
+    inset 0 2px 9px rgba(255,255,255,0.82);
+}
+
+.cro-apply-btn:active {
+  transform: translateY(0);
+  box-shadow: inset 0 2px 7px rgba(0, 0, 0, 0.11);
+}
+
+
+.cro-section {
+  padding: 60px 80px;
+  background: #fff;
+}
+
+.cro-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: #111;
+}

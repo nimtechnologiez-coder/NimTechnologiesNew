@@ -1,0 +1,141 @@
+/* === Section Wrapper === */
+.team-vision-section {
+  background: #fff;
+  font-family: "Poppins", sans-serif;
+}
+
+/* === Stat Boxes === */
+.stat-box {
+  width: 95%;
+  height: 210px;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 1) 0%,
+    #76cbbd 50%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Typography */
+.stat-box h2 {
+  margin: 0;
+  font-size: 32px;
+  color: #004c44;
+  font-weight: 700;
+}
+
+.stat-box p {
+  margin-top: 8px;
+  color: #004c44;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+/* Hover Effect */
+.stat-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* === Scroll Animation Base === */
+.fade-slide {
+  opacity: 0;
+  transform: translateY(70px);
+  transition: all 1s ease-out;
+}
+
+.fade-slide-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === Vision Area === */
+.vision-area {
+  position: relative;
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.vision-img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+
+}
+
+/* === Tagline === */
+.vision-tagline {
+  font-size: 2rem;
+  color: #000;
+  font-weight: 600;
+  margin-top: 30px;
+  line-ght: 1.6;
+  text-align: center;
+}
+
+.highlight {
+  color: #00796b;
+  font-weight: 700;
+}
+
+/* === Responsive Adjustments === */
+@media (max-width: 992px) {
+  .stat-box {
+    height: 180px;
+  }
+  .stat-box h2 {
+    font-size: 28px;
+  }
+  .stat-box p {
+    font-size: 15px;
+  }
+  .vision-tagline {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .stat-box {
+    height: 160px;
+  }
+  .stat-box h2 {
+    font-size: 26px;
+  }
+  .stat-box p {
+    font-size: 14px;
+  }
+  .vision-area {
+    max-width: 500px;
+  }
+  .vision-tagline {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .stat-box {
+    height: 140px;
+    margin-bottom: 20px;
+  }
+  .stat-box h2 {
+    font-size: 24px;
+  }
+  .stat-box p {
+    font-size: 13px;
+  }
+  .vision-area {
+    max-width: 100%;
+  }
+  .vision-tagline {
+    font-size: 1.1rem;
+  }
+}

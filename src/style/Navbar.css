@@ -1,0 +1,191 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
+}
+
+/* ========= NAVBAR ========= */
+.nim-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px;
+  padding: 0 60px;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1200;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* LOGO (No round) */
+.nim-nav-logo img {
+  height: 55px;
+  width: auto;
+  object-fit: contain;
+  transition: 0.3s ease;
+}
+
+.nim-nav-logo img:hover {
+  transform: scale(1.06);
+}
+
+/* Desktop Nav Links */
+.nim-nav-links {
+  display: flex;
+  gap: 40px;
+  margin-left: auto;
+}
+
+.nim-nav-links a {
+  font-size: 1.15rem;
+  text-decoration: none;
+  color: #0b3b36;
+  font-weight: 600;
+  transition: 0.25s ease;
+}
+
+.nim-nav-links a:hover {
+  color: #00bda6;
+  transform: translateY(-3px);
+}
+
+/* Hamburger */
+.nim-hamburger {
+  display: none;
+  font-size: 34px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #0b3b36;
+  z-index: 1400;
+}
+
+/* ========= MOBILE OVERLAY ========= */
+.nim-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 100%;
+  background: linear-gradient(180deg, #f9ffff, #e6fffc);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.45s cubic-bezier(0.22, 0.9, 0.3, 1);
+  z-index: 1350;
+}
+
+.nim-overlay.open {
+  height: 100%;
+}
+
+/* Mobile Nav Links (Correct Order) */
+.nim-overlay-links {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeSlide 0.6s ease forwards 0.3s;
+}
+
+@keyframes fadeSlide {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nim-overlay-links a {
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: #0b3b36;
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+
+.nim-overlay-links a:hover {
+  color: #00bda6;
+  transform: scale(1.05);
+}
+
+/* Close Button */
+.nim-close-btn {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  font-size: 42px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #0b3b36;
+}
+
+/* ========= BACKDROP ========= */
+.nim-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.3s ease;
+  z-index: 1300;
+}
+
+.nim-backdrop.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ========= RESPONSIVE ========= */
+@media (max-width: 992px) {
+  .nim-nav-links {
+    display: none;
+  }
+
+  .nim-hamburger {
+    display: block;
+  }
+
+  .nim-navbar {
+    padding: 0 28px;
+    height: 70px;
+  }
+
+  .nim-nav-logo img {
+    height: 46px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nim-overlay-links a {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .nim-navbar {
+    padding: 0 20px;
+  }
+
+  .nim-nav-logo img {
+    height: 40px;
+  }
+
+  .nim-overlay-links a {
+    font-size: 1.4rem;
+  }
+}
