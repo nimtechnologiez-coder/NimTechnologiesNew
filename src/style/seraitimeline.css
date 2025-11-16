@@ -15,13 +15,13 @@
 }
 
 /* ---------- TIMELINE CONTAINER ---------- */
-/* .timelinee-container {
+.timeline-container {
   position: relative;
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 120px;
-} */
+}
 
 /* Vertical teal line */
 .timeline-line {
@@ -43,6 +43,7 @@
   align-items: flex-start;
   justify-content: space-between;
   z-index: 2;
+
   opacity: 0;
   transform: translateX(100px);
   transition: opacity 0.8s ease, transform 0.8s ease;
@@ -132,6 +133,7 @@
   .timeline-item {
     flex-direction: column;
     align-items: flex-start;
+    gap: 10px;
   }
 
   .timeline-content {

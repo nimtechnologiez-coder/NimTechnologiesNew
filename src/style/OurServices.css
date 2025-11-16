@@ -152,6 +152,7 @@
     max-width: 300px;
     margin: 0 auto;
     padding: 2rem 1.5rem;
+   
   }
 
   .os-title {
@@ -177,8 +178,8 @@
 =============================== */
 @media (max-width: 480px) {
   .os-card {
-    width: 85%;
-    padding: 1.5rem 1rem;
+    width: 80%;
+    padding: 1.2rem 1rem;
   }
 
   .os-number {

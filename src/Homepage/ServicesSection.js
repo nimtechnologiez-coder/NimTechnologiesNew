@@ -1,6 +1,9 @@
 import React from "react";
 import "../style/ServiceSection.css";
 
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+
 import cloudIcon from "../images/cloud.png";
 import webIcon from "../images/web.png";
 import dataIcon from "../images/data.png";
@@ -33,32 +36,46 @@ const services = [
   },
 ];
 
+const ServiceCard = ({ service, index }) => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.2,
+  });
+
+  return (
+    <motion.div
+      ref={ref}
+      className="service-card"
+      initial={{ opacity: 0, y: 40 }}
+      animate={inView ? { opacity: 1, y: 0 } : {}}
+      transition={{
+        duration: 0.8,
+        ease: "easeOut",
+        delay: index * 0.15,
+      }}
+    >
+      <div className="service-icon">
+        <img src={service.icon} alt={service.title} />
+      </div>
+
+      <h3 className="service-title">{service.title}</h3>
+      <div className="accent-line"></div>
+
+      <p className="service-desc">{service.desc}</p>
+
+      <a href={service.link} className="learn-more">
+        Learn More <div className="learn-more-icon">➜</div>
+      </a>
+    </motion.div>
+  );
+};
+
 const ServicesSection = () => {
   return (
     <div className="services-wrapper">
       <div className="services-grid">
         {services.map((service, index) => (
-          <div className="service-card" key={index}>
-            <div className="service-icon">
-              <img src={service.icon} alt={service.title} />
-            </div>
-
-            <h3 className="service-title">{service.title}</h3>
-
-            <div className="accent-line"></div>
-
-            <p className="service-desc">{service.desc}</p>
-
-            <a
-              href={service.link}
-              className="learn-more"
-              
-              rel="noopener noreferrer"
-            >
-              Learn More
-              <div className="learn-more-icon">➜</div>
-            </a>
-          </div>
+          <ServiceCard key={index} service={service} index={index} />
         ))}
       </div>
     </div>

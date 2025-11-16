@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "../style/AcademyAndCaseStudies.css";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -7,7 +7,25 @@ import CaseImg1 from "../images/OurCase.png";
 import CaseImg2 from "../images/OurCase1.png";
 import CaseImg3 from "../images/OurCase2.png";
 
+/* -------------------------------
+   Reusable Scroll Animation Hook
+-------------------------------- */
+const useScrollAnim = (threshold = 0.2) => {
+  const controls = useAnimation();
+  const [ref, inView] = useInView({ threshold, triggerOnce: true });
+
+  React.useEffect(() => {
+    if (inView) controls.start({ opacity: 1, y: 0, x: 0 });
+  }, [inView]);
+
+  return { ref, controls };
+};
+
 const AcademyAndCaseStudies = () => {
+  const academyHeader = useScrollAnim();
+  const featureCard = useScrollAnim();
+  const caseHeader = useScrollAnim();
+
   const caseStudies = [
     {
       image: CaseImg1,
@@ -29,29 +47,23 @@ const AcademyAndCaseStudies = () => {
     },
   ];
 
-  const controls = useAnimation();
-  const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.2 });
-
-  useEffect(() => {
-    if (inView) {
-      controls.start({ opacity: 1, y: 0, x: 0 });
-    }
-  }, [controls, inView]);
-
   return (
     <div className="academy-case-wrapper">
-      {/* ================= Nim Academy Section ================= */}
+
+      {/* ================== Academy Section ================== */}
       <section className="academy-section">
+
         <motion.div
           className="academy-header"
-          ref={ref}
+          ref={academyHeader.ref}
           initial={{ opacity: 0, y: 50 }}
-          animate={controls}
+          animate={academyHeader.controls}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <h2 className="academy-title">
             Nim <span className="highlight-blue">Academy</span>
           </h2>
+
           <motion.h3
             className="academy-subtitle"
             initial={{ opacity: 0, y: 30 }}
@@ -63,30 +75,25 @@ const AcademyAndCaseStudies = () => {
             <span className="highlight-green">Nim </span>
             <span className="highlight-dark">Academy</span>
           </motion.h3>
+
           <motion.p
             className="academy-description"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            transition={{ duration: 0.8, delay: 0.35 }}
           >
-            Nim Academy is your gateway to mastering IT skills and building a successful future. We
-            provide comprehensive, hands-on training in programming, web and app development, and
-            modern technologies guided by industry experts. Our courses are designed to equip you
-            with practical knowledge, real-world experience, and certifications that make you
-            career-ready. Whether you're starting fresh or looking to upskill, Nim Academy empowers
-            you to unlock opportunities, excel in the tech industry, and achieve your professional
-            goals.
+            Nim Academy is your gateway to mastering IT skills...
           </motion.p>
         </motion.div>
 
-        {/* ===== Feature Card (Animated with Overflow Hidden) ===== */}
+        {/* ===== Feature Card (Slide from Right) ===== */}
         <motion.div
-          ref={ref}
           className="academy-feature-card motion-clip"
-          initial={{ opacity: 0, x: 150 }}
-          animate={controls}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          ref={featureCard.ref}
+          initial={{ opacity: 0, x: 120 }}
+          animate={featureCard.controls}
+          transition={{ duration: 0.9, ease: "easeOut" }}
         >
           <div className="feature-inner">
             <motion.h3
@@ -98,6 +105,7 @@ const AcademyAndCaseStudies = () => {
             >
               BUILT TO BRIDGE <span className="feature-green">BOTH WORLDS</span>
             </motion.h3>
+
             <motion.p
               className="feature-subtext"
               initial={{ opacity: 0, y: 30 }}
@@ -105,15 +113,16 @@ const AcademyAndCaseStudies = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              Whether you sell products or deliver services, Nim Books gives you
+              Whether you sell products or deliver services...
             </motion.p>
 
+            {/* Buttons */}
             <motion.div
               className="feature-buttons"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8, delay: 0.4 }}
+              transition={{ duration: 0.8, delay: 0.35 }}
             >
               <button className="feature-btn">Hands-On Learning</button>
               <button className="feature-btn">Expert Mentorship</button>
@@ -124,23 +133,22 @@ const AcademyAndCaseStudies = () => {
         </motion.div>
       </section>
 
-      {/* ================= Case Studies Section ================= */}
+      {/* ================== Case Studies Section ================== */}
       <section className="case-section">
+
         <motion.div
           className="case-header"
+          ref={caseHeader.ref}
           initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.8 }}
+          animate={caseHeader.controls}
+          transition={{ duration: 0.8, ease: "easeOut" }}
         >
           <p className="case-tag">Our Case Studies</p>
           <h2 className="case-title">
             Transforming Ideas into <span className="highlight">Digital Success</span>
           </h2>
           <p className="case-subtext">
-            At NIM Technologies, we don’t just build solutions — we create measurable impact.
-            Explore how we’ve helped our clients innovate, grow, and achieve success through
-            cutting-edge technology and creative strategy.
+            Explore how we’ve helped our clients innovate...
           </p>
         </motion.div>
 
@@ -155,10 +163,10 @@ const AcademyAndCaseStudies = () => {
               transition={{
                 duration: 0.8,
                 ease: "easeOut",
-                delay: index * 0.3,
+                delay: index * 0.25, // Correct stagger
               }}
             >
-              <img src={item.image} alt={item.title} className="case-image" />
+              <img src={item.image} className="case-image" alt={item.title} />
               <div className="case-content">
                 <h4 className="case-card-title">{item.title}</h4>
                 <p className="case-description">{item.description}</p>

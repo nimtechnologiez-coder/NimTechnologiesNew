@@ -83,13 +83,13 @@ const HowItWorks = () => {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const index = parseInt(entry.target.dataset.index);
+            const index = entry.target.dataset.index;
             setVisibleItems((prev) => [...new Set([...prev, index])]);
             observer.unobserve(entry.target);
           }
         });
       },
-      { threshold: 0.3 } // triggers when 30% of item is visible
+      { threshold: 0.3 }
     );
 
     itemRefs.current.forEach((el) => el && observer.observe(el));
@@ -108,10 +108,11 @@ const HowItWorks = () => {
             data-index={index}
             ref={(el) => (itemRefs.current[index] = el)}
             className={`timeline-item ${item.side} ${
-              visibleItems.includes(index) ? "in-view" : ""
+              visibleItems.includes(String(index)) ? "in-view" : ""
             }`}
           >
             <div className="timeline-dot"></div>
+
             <div className="timeline-content">
               <h3>{item.title}</h3>
               <ul>
@@ -122,6 +123,7 @@ const HowItWorks = () => {
             </div>
           </div>
         ))}
+
         <div className="timeline-line"></div>
       </div>
     </section>
