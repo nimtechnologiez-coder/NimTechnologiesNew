@@ -15,6 +15,7 @@ const AIDigitalSection = () => {
       We design AI-powered systems that help businesses analyze, predict, and perform better — 
       turning complex data into clear, actionable results.`,
       img: aiImage,
+      link: "/Ailearnmore", // <-- ADD LINK HERE
     },
     {
       id: "02",
@@ -23,6 +24,7 @@ const AIDigitalSection = () => {
       We create secure, high-performance SaaS solutions that help businesses operate smarter 
       and grow faster in the digital age.`,
       img: cloudImage,
+      link: "/Cloudlearn", // <-- ADD LINK HERE
     },
     {
       id: "03",
@@ -30,6 +32,7 @@ const AIDigitalSection = () => {
       desc: `Delivering innovation through modern, scalable, and user-focused applications —
       we build digital ecosystems that connect users, data, and advanced technology.`,
       img: webImage,
+      link: "/web", // <-- ADD LINK HERE
     },
     {
       id: "04",
@@ -37,6 +40,7 @@ const AIDigitalSection = () => {
       desc: `Elevate your brand with data-backed marketing strategies and modern storytelling.
       We deliver measurable results and lasting digital impact.`,
       img: marketingImage,
+      link: "/dmlearn", // <-- ADD LINK HERE
     },
   ];
 
@@ -85,11 +89,7 @@ const AIDigitalSection = () => {
               index % 2 === 0 ? "nimAI-slide-right" : "nimAI-slide-left"
             }`}
           >
-            <img
-              src={service.img}
-              alt={service.title}
-              className="nimAI-image"
-            />
+            <img src={service.img} alt={service.title} className="nimAI-image" />
           </div>
 
           {/* Content */}
@@ -101,7 +101,10 @@ const AIDigitalSection = () => {
             <h3>{service.title}</h3>
             <p>{service.desc}</p>
 
-            <button className="nimAI-btn">LEARN MORE</button>
+            {/* Link Added */}
+            <a href={service.link} className="nimAI-btn">
+              LEARN MORE
+            </a>
           </div>
         </section>
       ))}

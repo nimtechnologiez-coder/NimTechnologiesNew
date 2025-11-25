@@ -20,7 +20,7 @@ const services = [
     title: "Web Development",
     desc: "We craft seamless, high-performing digital experiences that combine creativity, functionality, and scalability — empowering businesses to grow in the digital era.",
     icon: webIcon,
-    link: "/webt",
+    link: "/web",
   },
   {
     title: "Data Analytics & Machine Learning",

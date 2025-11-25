@@ -197,3 +197,8 @@
     padding: 8px 22px;
   }
 }
+.nimAI-btn {
+  text-decoration: none !important;   /* Remove underline */
+  color: #fff;                        /* Keep button text color */
+  display: inline-block;
+}
