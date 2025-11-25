@@ -1,20 +1,20 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../style/Footer.css";
-import startupImg from "../images/footer.png"; // replace with your image
-import msmeImg from "../images/Footer1.png"; // replace with your image
+import startupImg from "../images/footer.png"; 
+import msmeImg from "../images/Footer1.png"; 
 
-import { FaLinkedinIn, FaTwitter, FaGithub } from "react-icons/fa";
+import { FaLinkedinIn, FaTwitter, FaInstagram } from "react-icons/fa";
 import { HiMail, HiPhone, HiLocationMarker } from "react-icons/hi";
 
 const Footer = () => {
   return (
     <footer className="footer-section py-5">
       <div className="container">
-        <div className="row align-items-start gy-4">
+        <div className="row align-items-start gy-5">
 
           {/* === Logos Section === */}
-          <div className="col-lg-3 col-md-6 text-center text-md-start">
+          <div className="col-lg-3 col-md-6 text-center text-md-start footer-logo-column">
             <img src={startupImg} alt="Startup India" className="footer-logo mb-3" />
             <img src={msmeImg} alt="MSME" className="footer-logo" />
           </div>
@@ -30,10 +30,10 @@ const Footer = () => {
               Cloud to Data Analytics and beyond.
             </p>
 
-            <div className="footer-icons mt-3">
-              <a href="#"><FaLinkedinIn /></a>
+            <div className="footer-icons mt-3 d-flex justify-content-md-start justify-content-center">
+              <a href="https://in.linkedin.com/company/nim-technologies"><FaLinkedinIn /></a>
               <a href="#"><FaTwitter /></a>
-              <a href="#"><FaGithub /></a>
+              <a href="https://www.instagram.com/nim_technologies_/?hl=en"><FaInstagram /></a>
             </div>
           </div>
 
@@ -41,10 +41,10 @@ const Footer = () => {
           <div className="col-lg-2 col-md-6 text-center text-md-start">
             <h6 className="footer-heading">Quick Links</h6>
             <ul className="footer-links">
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Products</a></li>
-              <li><a href="#">Industries</a></li>
-              <li><a href="#">Academy</a></li>
+              <li><a href="/service">Services</a></li>
+              <li><a href="/nimbook">Products</a></li>
+              <li><a href="/about">Industries</a></li>
+              <li><a href="https://www.nimacademy.in/">Academy</a></li>
             </ul>
           </div>
 
@@ -52,9 +52,12 @@ const Footer = () => {
           <div className="col-lg-2 col-md-6 text-center text-md-start">
             <h6 className="footer-heading">Get in Touch</h6>
             <ul className="footer-contact">
-              <li><HiMail /> info@nimtech.com</li>
-              <li><HiPhone /> +1 (234) 567-890</li>
-              <li><HiLocationMarker /> Global Presence<br />7+ Countries</li>
+              <li><HiMail /> nimtechnologiez@gmail.com</li>
+              <li><HiPhone /> +91 7418855108</li>
+              <li>
+                <HiLocationMarker />
+                North Konam, Nagercoil, Tamil Nadu 629170
+              </li>
             </ul>
           </div>
         </div>

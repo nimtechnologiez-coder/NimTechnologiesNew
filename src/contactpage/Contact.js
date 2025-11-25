@@ -88,7 +88,7 @@ const ContactPage = () => {
             </div>
             <div>
               <h3>Email</h3>
-              <p>contact@nimtechnologies.com</p>
+              <p>nimtechnologiez@gmail.com</p>
             </div>
           </div>
         </div>
