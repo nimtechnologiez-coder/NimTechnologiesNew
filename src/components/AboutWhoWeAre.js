@@ -169,7 +169,7 @@ const AboutPage = () => {
         }
 
         /* === Timeline Cards === */
-        .timeline-container {
+        .timeline-containerr {
           display: flex;
           justify-content: center;
           align-items: stretch;
@@ -264,7 +264,7 @@ const AboutPage = () => {
         }
 
         @media (max-width: 768px) {
-          .timeline-container {
+          .timeline-containerr {
             flex-wrap: wrap;
             justify-content: center;
             padding: 0 30px;
@@ -286,7 +286,7 @@ const AboutPage = () => {
           .who-title {
             font-size: 2rem;
           }
-          .timeline-container {
+          .timeline-containerr {
             flex-direction: column;
             align-items: center;
             gap: 20px;
@@ -352,7 +352,7 @@ const AboutPage = () => {
           Innovating the <span className="highlight">Digital</span> Future
         </div>
 
-        <div className="timeline-container">
+        <div className="timeline-containerr">
           {[
             {
               year: "2020",

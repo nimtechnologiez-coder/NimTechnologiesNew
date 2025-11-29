@@ -29,7 +29,7 @@ const FlagshipProduct = () => {
         animate={controls}
       >
         <div className="fp-top">
-          
+
           {/* LEFT – IMAGE */}
           <motion.div
             className="fp-left"
@@ -62,11 +62,18 @@ const FlagshipProduct = () => {
               clarity, progress, and smarter decisions.
             </p>
 
-            <button className="fp-btn">
-              Access NimBooks <span className="fp-arrow">➜</span>
-            </button>
-          </div>
+            {/* Button with Link */}
+            <a
+              href="/nimbook"
+              
+              rel="noopener noreferrer"
+            >
+              <button className="fp-btn">
+                Access NimBooks <span className="fp-arrow">➜</span>
+              </button>
+            </a>
 
+          </div>
         </div>
       </motion.div>
     </section>
