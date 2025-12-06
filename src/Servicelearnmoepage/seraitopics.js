@@ -4,12 +4,12 @@ import "../style/seraitopics.css";
 
 /* IMPORT LOCAL IMAGES (place them in /src/assets/ai-cards/) */
 import brain from "../careerimages/ai01.png";
-import touch from "../careerimages/ai01.png";
-import scan from "../careerimages/ai01.png";
-import chat from "../careerimages/ai01.png";
-import engine from "../careerimages/ai01.png";
-import dataviz from "../careerimages/ai01.png";
-import automation from "../careerimages/ai01.png";
+import touch from "../careerimages/ai02.png";
+import scan from "../careerimages/ai03.png";
+import chat from "../careerimages/ai04.png";
+import engine from "../careerimages/ai05.png";
+import dataviz from "../careerimages/ai06.png";
+import automation from "../careerimages/ai07.png";
 
 const cards = [
   {

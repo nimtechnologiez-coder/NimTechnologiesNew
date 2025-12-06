@@ -3,13 +3,13 @@ import { motion } from "framer-motion";
 import "../style/seraitopics.css";
 
 /* IMPORT LOCAL IMAGES (place them in /src/assets/ai-cards/) */
-import brain from "../careerimages/ai01.png";
-import touch from "../careerimages/ai01.png";
-import scan from "../careerimages/ai01.png";
-import chat from "../careerimages/ai01.png";
-import engine from "../careerimages/ai01.png";
-import dataviz from "../careerimages/ai01.png";
-import automation from "../careerimages/ai01.png";
+import brain from "../careerimages/dm01.png";
+import touch from "../careerimages/dm02.png";
+import scan from "../careerimages/dm03.png";
+import chat from "../careerimages/dm04.png";
+import engine from "../careerimages/dm05.png";
+import dataviz from "../careerimages/dm06.png";
+import automation from "../careerimages/dm07.png";
 
 const cards = [
   {
