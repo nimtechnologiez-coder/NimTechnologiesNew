@@ -1,0 +1,615 @@
+/* ============================================
+   ENROLL PAGE STYLES
+   ============================================ */
+
+.enroll-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 20px;
+}
+
+.enroll-container {
+  max-width: 800px;
+  width: 100%;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.enroll-content {
+  padding: 60px 50px;
+  text-align: center;
+}
+
+.enroll-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.enroll-subtitle {
+  font-size: 1.25rem;
+  color: #667eea;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.enroll-body {
+  text-align: left;
+  color: #4a5568;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.enroll-body p {
+  margin-bottom: 15px;
+}
+
+.enroll-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 20px 0;
+}
+
+.enroll-list li {
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 12px;
+  color: #2d3748;
+  font-weight: 500;
+}
+
+.enroll-list li::before {
+  content: "•";
+  position: absolute;
+  left: 10px;
+  color: #667eea;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.trust-points {
+  background: #f7fafc;
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 40px;
+}
+
+.trust-points h3 {
+  font-size: 1.4rem;
+  color: #2d3748;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.trust-items {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.trust-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  text-align: left;
+  transition: transform 0.2s;
+}
+
+.trust-item:hover {
+  transform: translateX(5px);
+}
+
+.trust-icon {
+  font-size: 1.5rem;
+  min-width: 30px;
+}
+
+.trust-item span:last-child {
+  color: #4a5568;
+  font-weight: 500;
+}
+
+.enroll-button {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 18px 50px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+  margin-bottom: 20px;
+}
+
+.enroll-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(102, 126, 234, 0.5);
+}
+
+.enroll-button:active {
+  transform: translateY(-1px);
+}
+
+.helper-text {
+  color: #718096;
+  font-size: 0.95rem;
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+.footer-note {
+  padding-top: 30px;
+  border-top: 1px solid #e2e8f0;
+  margin-top: 30px;
+}
+
+.footer-note p {
+  color: #718096;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.footer-note a {
+  color: #667eea;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.footer-note a:hover {
+  color: #764ba2;
+  text-decoration: underline;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+
+/* --- Large Tablets & Small Laptops (1200px) --- */
+@media (max-width: 1200px) {
+  .enroll-container {
+    max-width: 750px;
+  }
+
+  .enroll-title {
+    font-size: 2.3rem;
+  }
+
+  .enroll-subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+/* --- Tablets (992px) --- */
+@media (max-width: 992px) {
+  .enroll-page {
+    padding: 140px 25px 60px;
+  }
+
+  .enroll-container {
+    max-width: 90%;
+  }
+
+  .enroll-content {
+    padding: 45px 35px;
+  }
+
+  .enroll-title {
+    font-size: 2.2rem;
+    margin-bottom: 18px;
+  }
+
+  .enroll-subtitle {
+    font-size: 1.18rem;
+    margin-bottom: 28px;
+  }
+
+  .enroll-body {
+    font-size: 1.02rem;
+    line-height: 1.75;
+    margin-bottom: 35px;
+  }
+
+  .trust-points {
+    padding: 28px 25px;
+    margin-bottom: 35px;
+  }
+
+  .trust-points h3 {
+    font-size: 1.35rem;
+  }
+
+  .enroll-button {
+    font-size: 1.15rem;
+    padding: 16px 45px;
+  }
+}
+
+/* --- Mobile Large (768px) --- */
+@media (max-width: 768px) {
+  .enroll-page {
+    padding: 120px 20px 50px;
+  }
+
+  .enroll-container {
+    max-width: 95%;
+    border-radius: 18px;
+  }
+
+  .enroll-content {
+    padding: 40px 28px;
+  }
+
+  .enroll-title {
+    font-size: 2rem;
+    margin-bottom: 16px;
+    line-height: 1.3;
+  }
+
+  .enroll-subtitle {
+    font-size: 1.12rem;
+    margin-bottom: 25px;
+    line-height: 1.4;
+  }
+
+  .enroll-body {
+    font-size: 0.98rem;
+    line-height: 1.7;
+    margin-bottom: 32px;
+  }
+
+  .enroll-list {
+    margin: 18px 0;
+  }
+
+  .enroll-list li {
+    font-size: 0.96rem;
+    margin-bottom: 11px;
+    line-height: 1.6;
+  }
+
+  .trust-points {
+    padding: 25px 22px;
+    margin-bottom: 32px;
+    border-radius: 12px;
+  }
+
+  .trust-points h3 {
+    font-size: 1.25rem;
+    margin-bottom: 18px;
+  }
+
+  .trust-item {
+    padding: 13px;
+    gap: 13px;
+  }
+
+  .enroll-button {
+    font-size: 1.08rem;
+    padding: 15px 40px;
+    width: 100%;
+    border-radius: 40px;
+  }
+
+  .helper-text {
+    font-size: 0.92rem;
+    margin-bottom: 28px;
+  }
+}
+
+/* --- Mobile Medium (640px) --- */
+@media (max-width: 640px) {
+  .enroll-page {
+    padding: 110px 18px 45px;
+  }
+
+  .enroll-container {
+    border-radius: 16px;
+  }
+
+  .enroll-content {
+    padding: 38px 25px;
+  }
+
+  .enroll-title {
+    font-size: 1.9rem;
+    margin-bottom: 15px;
+  }
+
+  .enroll-subtitle {
+    font-size: 1.08rem;
+    margin-bottom: 23px;
+  }
+
+  .enroll-body {
+    font-size: 0.95rem;
+    margin-bottom: 30px;
+  }
+
+  .enroll-list li {
+    font-size: 0.93rem;
+    margin-bottom: 10px;
+  }
+
+  .trust-points {
+    padding: 23px 20px;
+  }
+
+  .trust-points h3 {
+    font-size: 1.2rem;
+  }
+
+  .trust-item {
+    padding: 12px;
+  }
+
+  .enroll-button {
+    font-size: 1.05rem;
+    padding: 15px 38px;
+  }
+}
+
+/* --- Mobile Small (480px) --- */
+@media (max-width: 480px) {
+  .enroll-page {
+    padding: 100px 15px 40px;
+  }
+
+  .enroll-container {
+    border-radius: 14px;
+    max-width: 100%;
+  }
+
+  .enroll-content {
+    padding: 35px 22px;
+  }
+
+  .enroll-title {
+    font-size: 1.75rem;
+    margin-bottom: 14px;
+    line-height: 1.25;
+  }
+
+  .enroll-subtitle {
+    font-size: 1.05rem;
+    margin-bottom: 22px;
+    line-height: 1.35;
+  }
+
+  .enroll-body {
+    font-size: 0.92rem;
+    line-height: 1.65;
+    margin-bottom: 28px;
+  }
+
+  .enroll-body p {
+    margin-bottom: 13px;
+  }
+
+  .enroll-list {
+    margin: 16px 0;
+  }
+
+  .enroll-list li {
+    font-size: 0.9rem;
+    padding-left: 26px;
+    margin-bottom: 9px;
+    line-height: 1.5;
+  }
+
+  .enroll-list li::before {
+    font-size: 1.35rem;
+    left: 6px;
+  }
+
+  .trust-points {
+    padding: 22px 18px;
+    margin-bottom: 28px;
+    border-radius: 10px;
+  }
+
+  .trust-points h3 {
+    font-size: 1.18rem;
+    margin-bottom: 16px;
+  }
+
+  .trust-items {
+    gap: 12px;
+  }
+
+  .trust-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 14px 12px;
+    gap: 10px;
+  }
+
+  .trust-item:hover {
+    transform: scale(1.02);
+  }
+
+  .trust-icon {
+    font-size: 1.4rem;
+  }
+
+  .trust-item span:last-child {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .enroll-button {
+    font-size: 1.02rem;
+    padding: 15px 35px;
+    width: 100%;
+    border-radius: 35px;
+    margin-bottom: 18px;
+  }
+
+  .helper-text {
+    font-size: 0.88rem;
+    margin-bottom: 25px;
+    line-height: 1.5;
+  }
+
+  .footer-note {
+    padding-top: 25px;
+    margin-top: 25px;
+  }
+
+  .footer-note p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+  }
+}
+
+/* --- Very Small Phones (380px) --- */
+@media (max-width: 380px) {
+  .enroll-page {
+    padding: 95px 12px 35px;
+  }
+
+  .enroll-content {
+    padding: 30px 18px;
+  }
+
+  .enroll-title {
+    font-size: 1.65rem;
+    margin-bottom: 12px;
+    line-height: 1.2;
+  }
+
+  .enroll-subtitle {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  .enroll-body {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    margin-bottom: 25px;
+  }
+
+  .enroll-list li {
+    font-size: 0.87rem;
+    padding-left: 24px;
+  }
+
+  .enroll-list li::before {
+    font-size: 1.25rem;
+    left: 5px;
+  }
+
+  .trust-points {
+    padding: 20px 15px;
+    margin-bottom: 25px;
+  }
+
+  .trust-points h3 {
+    font-size: 1.12rem;
+    margin-bottom: 14px;
+  }
+
+  .trust-item {
+    padding: 12px 10px;
+  }
+
+  .trust-icon {
+    font-size: 1.3rem;
+  }
+
+  .trust-item span:last-child {
+    font-size: 0.87rem;
+  }
+
+  .enroll-button {
+    padding: 14px 30px;
+    font-size: 0.98rem;
+    border-radius: 32px;
+  }
+
+  .helper-text {
+    font-size: 0.85rem;
+  }
+
+  .footer-note p {
+    font-size: 0.82rem;
+  }
+}
+
+/* --- Ultra Small (320px) --- */
+@media (max-width: 320px) {
+  .enroll-page {
+    padding: 90px 10px 30px;
+  }
+
+  .enroll-content {
+    padding: 28px 15px;
+  }
+
+  .enroll-title {
+    font-size: 1.55rem;
+    margin-bottom: 10px;
+  }
+
+  .enroll-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 18px;
+  }
+
+  .enroll-body {
+    font-size: 0.85rem;
+    margin-bottom: 22px;
+  }
+
+  .enroll-list li {
+    font-size: 0.84rem;
+    padding-left: 22px;
+  }
+
+  .enroll-list li::before {
+    font-size: 1.2rem;
+  }
+
+  .trust-points {
+    padding: 18px 12px;
+  }
+
+  .trust-points h3 {
+    font-size: 1.08rem;
+  }
+
+  .trust-item {
+    padding: 10px 8px;
+  }
+
+  .trust-item span:last-child {
+    font-size: 0.84rem;
+  }
+
+  .enroll-button {
+    font-size: 0.95rem;
+    padding: 13px 28px;
+  }
+
+  .helper-text {
+    font-size: 0.82rem;
+  }
+
+  .footer-note p {
+    font-size: 0.8rem;
+  }
+}

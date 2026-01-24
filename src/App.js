@@ -73,7 +73,8 @@ import RegisterForm from "./Careers/careernextregister";
 ----------------------------------------- */
 import Nimbook from "./Nimbook/Nimbook";
 import ContactPage from "./contactpage/Contact";
-import  HeroSectionn from "./contactpage/contactushero"
+import HeroSectionn from "./contactpage/contactushero"
+import Enroll from "./components/Enroll";
 
 
 /* -----------------------------------------
@@ -199,9 +200,21 @@ function App() {
           path="/contact"
           element={
             <>
-              < HeroSectionn/>
+              < HeroSectionn />
               <ContactPage />
               <Footer />
+            </>
+          }
+        />
+
+        {/* =======================
+            ENROLL PAGE
+        ========================== */}
+        <Route
+          path="/enroll"
+          element={
+            <>
+              <Enroll />
             </>
           }
         />

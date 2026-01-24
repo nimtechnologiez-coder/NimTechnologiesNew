@@ -60,6 +60,23 @@ body {
   transform: translateY(-3px);
 }
 
+/* Enroll Button - Desktop */
+.nim-nav-links .nim-enroll-btn {
+  background: linear-gradient(135deg, #00bda6 0%, #0b3b36 100%);
+  color: white !important;
+  padding: 10px 24px;
+  border-radius: 25px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 189, 166, 0.3);
+  transition: all 0.3s ease;
+}
+
+.nim-nav-links .nim-enroll-btn:hover {
+  background: linear-gradient(135deg, #0b3b36 0%, #00bda6 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 189, 166, 0.4);
+}
+
 /* Hamburger */
 .nim-hamburger {
   display: none;
@@ -120,6 +137,23 @@ body {
 .nim-overlay-links a:hover {
   color: #00bda6;
   transform: scale(1.05);
+}
+
+/* Enroll Button - Mobile */
+.nim-overlay-links .nim-enroll-btn-mobile {
+  background: linear-gradient(135deg, #00bda6 0%, #0b3b36 100%);
+  color: white !important;
+  padding: 14px 32px;
+  border-radius: 30px;
+  margin-top: 20px;
+  display: inline-block;
+  box-shadow: 0 6px 16px rgba(0, 189, 166, 0.3);
+}
+
+.nim-overlay-links .nim-enroll-btn-mobile:hover {
+  background: linear-gradient(135deg, #0b3b36 0%, #00bda6 100%);
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0, 189, 166, 0.4);
 }
 
 /* Close Button */

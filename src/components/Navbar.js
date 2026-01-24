@@ -54,6 +54,7 @@ const Navbar = () => {
           <a href="/nimbook">Products</a>
           <a href="/careers">Careers</a>
           <a href="/contact">Contact</a>
+          <a href="/enroll" className="nim-enroll-btn">Enroll Now</a>
         </nav>
 
         <button className="nim-hamburger" onClick={openMenu} aria-label="Open Menu">
@@ -77,6 +78,7 @@ const Navbar = () => {
           <a href="/nimbook" onClick={closeMenu}>Products</a>
           <a href="/careers" onClick={closeMenu}>Careers</a>
           <a href="/contact" onClick={closeMenu}>Contact</a>
+          <a href="/enroll" onClick={closeMenu} className="nim-enroll-btn-mobile">Enroll Now</a>
         </nav>
       </aside>
     </>
