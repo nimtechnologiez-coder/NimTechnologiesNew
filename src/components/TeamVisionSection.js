@@ -1,45 +1,49 @@
 import React, { useEffect, useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../style/TeamVisionSection.css";
-import visionImg from "../images/aboutusblack.jpeg"; // replace with your actual image
+import visionImg from "../images/aboutusblack.jpeg";
 
 const TeamVision = () => {
   const imageRef = useRef(null);
   const statRefs = useRef([]);
 
   useEffect(() => {
+    const statNodes = statRefs.current;
+    const imageNode = imageRef.current;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("fade-slide-in");
-            observer.unobserve(entry.target); // trigger only once
+            observer.unobserve(entry.target); // trigger once
           }
         });
       },
       { threshold: 0.2 }
     );
 
-    // Observe stat cards
-    statRefs.current.forEach((card) => {
-      if (card) observer.observe(card);
+    // observe stat cards
+    statNodes.forEach((node) => {
+      if (node) observer.observe(node);
     });
 
-    // Observe the image
-    if (imageRef.current) observer.observe(imageRef.current);
+    // observe image
+    if (imageNode) observer.observe(imageNode);
 
     return () => {
-      statRefs.current.forEach((card) => {
-        if (card) observer.unobserve(card);
+      statNodes.forEach((node) => {
+        if (node) observer.unobserve(node);
       });
-      if (imageRef.current) observer.unobserve(imageRef.current);
+
+      if (imageNode) observer.unobserve(imageNode);
     };
   }, []);
 
   return (
     <section className="team-vision-section py-5">
       <div className="container text-center">
-        {/* === Top Stats (Animated) === */}
+        {/* Top Stats */}
         <div className="row justify-content-center mb-5">
           {[
             { number: "50+", text: "TEAM MEMBERS" },
@@ -51,7 +55,7 @@ const TeamVision = () => {
               <div
                 ref={(el) => (statRefs.current[index] = el)}
                 className="stat-box fade-slide"
-                style={{ transitionDelay: `${index * 0.2}s` }} // stagger animation
+                style={{ transitionDelay: `${index * 0.2}s` }}
               >
                 <h2>{item.number}</h2>
                 <p>{item.text}</p>
@@ -60,7 +64,7 @@ const TeamVision = () => {
           ))}
         </div>
 
-        {/* === Vision Image with Scroll Animation === */}
+        {/* Vision Image */}
         <div
           ref={imageRef}
           className="vision-area position-relative mx-auto mb-5 fade-slide"
@@ -68,7 +72,7 @@ const TeamVision = () => {
           <img src={visionImg} alt="Team Vision" className="vision-img" />
         </div>
 
-        {/* === Tagline === */}
+        {/* Tagline */}
         <p className="vision-tagline mt-4">
           Together, we <span className="highlight">innovate</span>. Together, we{" "}
           <span className="highlight">grow</span>. <br />
