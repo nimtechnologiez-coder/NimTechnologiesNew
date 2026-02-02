@@ -9,22 +9,25 @@ const About = () => {
   const headingRef = useRef(null);
 
   useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            buttonRef.current.classList.add("about-slide-right");
-            headingRef.current.classList.add("about-slide-right");
+            buttonRef.current?.classList.add("about-slide-right");
+            headingRef.current?.classList.add("about-slide-right");
           }
         });
       },
       { threshold: 0.3 }
     );
 
-    if (sectionRef.current) observer.observe(sectionRef.current);
+    observer.observe(section);
 
     return () => {
-      if (sectionRef.current) observer.unobserve(sectionRef.current);
+      observer.unobserve(section);
     };
   }, []);
 

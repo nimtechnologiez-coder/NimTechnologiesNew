@@ -31,9 +31,32 @@ const Footer = () => {
             </p>
 
             <div className="footer-icons mt-3 d-flex justify-content-md-start justify-content-center">
-              <a href="https://in.linkedin.com/company/nim-technologies"><FaLinkedinIn /></a>
-              <a href="#"><FaTwitter /></a>
-              <a href="https://www.instagram.com/nim_technologies_/?hl=en"><FaInstagram /></a>
+              <a
+                href="https://in.linkedin.com/company/nim-technologies"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedinIn />
+              </a>
+
+              <a
+                href="https://twitter.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Twitter"
+              >
+                <FaTwitter />
+              </a>
+
+              <a
+                href="https://www.instagram.com/nim_technologies_/?hl=en"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <FaInstagram />
+              </a>
             </div>
           </div>
 
@@ -44,7 +67,15 @@ const Footer = () => {
               <li><a href="/service">Services</a></li>
               <li><a href="/nimbook">Products</a></li>
               <li><a href="/about">Industries</a></li>
-              <li><a href="https://www.nimacademy.in/">Academy</a></li>
+              <li>
+                <a
+                  href="https://www.nimacademy.in/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Academy
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -72,9 +103,15 @@ const Footer = () => {
             </p>
           </div>
           <div className="col-md-6 text-center text-md-end">
-            <a href="#" className="footer-policy">Privacy Policy</a>
-            <a href="#" className="footer-policy">Terms of Service</a>
-            <a href="#" className="footer-policy">Cookie Policy</a>
+            <a href="/privacy-policy" className="footer-policy">
+              Privacy Policy
+            </a>
+            <a href="/terms-of-service" className="footer-policy">
+              Terms of Service
+            </a>
+            <a href="/cookie-policy" className="footer-policy">
+              Cookie Policy
+            </a>
           </div>
         </div>
       </div>
