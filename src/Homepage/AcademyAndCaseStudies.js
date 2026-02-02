@@ -12,11 +12,16 @@ import CaseImg3 from "../images/OurCase2.png";
 -------------------------------- */
 const useScrollAnim = (threshold = 0.2) => {
   const controls = useAnimation();
-  const [ref, inView] = useInView({ threshold, triggerOnce: true });
+  const [ref, inView] = useInView({
+    threshold,
+    triggerOnce: true,
+  });
 
   React.useEffect(() => {
-    if (inView) controls.start({ opacity: 1, y: 0, x: 0 });
-  }, [inView]);
+    if (inView) {
+      controls.start({ opacity: 1, y: 0, x: 0 });
+    }
+  }, [inView, controls]); // ✅ FIXED
 
   return { ref, controls };
 };
@@ -49,10 +54,8 @@ const AcademyAndCaseStudies = () => {
 
   return (
     <div className="academy-case-wrapper">
-
       {/* ================== Academy Section ================== */}
       <section className="academy-section">
-
         <motion.div
           className="academy-header"
           ref={academyHeader.ref}
@@ -87,7 +90,7 @@ const AcademyAndCaseStudies = () => {
           </motion.p>
         </motion.div>
 
-        {/* ===== Feature Card (Slide from Right) ===== */}
+        {/* ===== Feature Card ===== */}
         <motion.div
           className="academy-feature-card motion-clip"
           ref={featureCard.ref}
@@ -116,7 +119,6 @@ const AcademyAndCaseStudies = () => {
               Whether you sell products or deliver services...
             </motion.p>
 
-            {/* Buttons */}
             <motion.div
               className="feature-buttons"
               initial={{ opacity: 0, y: 30 }}
@@ -135,7 +137,6 @@ const AcademyAndCaseStudies = () => {
 
       {/* ================== Case Studies Section ================== */}
       <section className="case-section">
-
         <motion.div
           className="case-header"
           ref={caseHeader.ref}
@@ -145,7 +146,8 @@ const AcademyAndCaseStudies = () => {
         >
           <p className="case-tag">Our Case Studies</p>
           <h2 className="case-title">
-            Transforming Ideas into <span className="highlight">Digital Success</span>
+            Transforming Ideas into{" "}
+            <span className="highlight">Digital Success</span>
           </h2>
           <p className="case-subtext">
             Explore how we’ve helped our clients innovate...
@@ -163,10 +165,14 @@ const AcademyAndCaseStudies = () => {
               transition={{
                 duration: 0.8,
                 ease: "easeOut",
-                delay: index * 0.25, // Correct stagger
+                delay: index * 0.25,
               }}
             >
-              <img src={item.image} className="case-image" alt={item.title} />
+              <img
+                src={item.image}
+                className="case-image"
+                alt={item.title}
+              />
               <div className="case-content">
                 <h4 className="case-card-title">{item.title}</h4>
                 <p className="case-description">{item.description}</p>
