@@ -1,4 +1,6 @@
-/* RESET */
+/* =============================
+   RESET
+============================= */
 * {
   margin: 0;
   padding: 0;
@@ -10,7 +12,9 @@ body {
   overflow-x: hidden;
 }
 
-/* ========= NAVBAR ========= */
+/* =============================
+   NAVBAR
+============================= */
 .nim-navbar {
   position: fixed;
   top: 0;
@@ -28,11 +32,9 @@ body {
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
 }
 
-/* LOGO (No round) */
+/* LOGO */
 .nim-nav-logo img {
   height: 55px;
-  width: auto;
-  object-fit: contain;
   transition: 0.3s ease;
 }
 
@@ -40,11 +42,14 @@ body {
   transform: scale(1.06);
 }
 
-/* Desktop Nav Links */
+/* =============================
+   DESKTOP NAV LINKS
+============================= */
 .nim-nav-links {
   display: flex;
   gap: 40px;
   margin-left: auto;
+  align-items: center;
 }
 
 .nim-nav-links a {
@@ -60,24 +65,80 @@ body {
   transform: translateY(-3px);
 }
 
-/* Enroll Button - Desktop */
-.nim-nav-links .nim-enroll-btn {
-  background: linear-gradient(135deg, #00bda6 0%, #0b3b36 100%);
-  color: white !important;
+/* ENROLL BUTTON */
+.nim-enroll-btn {
+  background: linear-gradient(135deg, #00bda6, #0b3b36);
+  color: #fff !important;
   padding: 10px 24px;
   border-radius: 25px;
-  font-weight: 600;
   box-shadow: 0 4px 12px rgba(0, 189, 166, 0.3);
-  transition: all 0.3s ease;
 }
 
-.nim-nav-links .nim-enroll-btn:hover {
-  background: linear-gradient(135deg, #0b3b36 0%, #00bda6 100%);
+/* =============================
+   PRODUCTS DROPDOWN (HOVER SAFE)
+============================= */
+.nim-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Same look as links */
+.nim-dropdown-btn {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: #0b3b36;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.nim-dropdown-btn:hover {
+  color: #00bda6;
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0, 189, 166, 0.4);
 }
 
-/* Hamburger */
+/* NO hover gap */
+.nim-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  margin-top: 8px;
+  background: #ffffff;
+  border-radius: 14px;
+  min-width: 230px;
+  padding: 10px 0;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.18);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(6px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 2000;
+}
+
+/* SHOW */
+.nim-dropdown-menu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nim-dropdown-menu a {
+  display: block;
+  padding: 12px 20px;
+  font-weight: 500;
+  color: #0b3b36;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.nim-dropdown-menu a:hover {
+  background: #f1fffd;
+  color: #00bda6;
+}
+
+/* =============================
+   HAMBURGER
+============================= */
 .nim-hamburger {
   display: none;
   font-size: 34px;
@@ -85,78 +146,68 @@ body {
   border: none;
   cursor: pointer;
   color: #0b3b36;
-  z-index: 1400;
 }
 
-/* ========= MOBILE OVERLAY ========= */
+/* =============================
+   MOBILE OVERLAY
+============================= */
 .nim-overlay {
   position: fixed;
-  top: 0;
-  left: 0;
-  height: 0;
-  width: 100%;
+  inset: 0;
   background: linear-gradient(180deg, #f9ffff, #e6fffc);
+  height: 0;
+  overflow: hidden;
+  transition: 0.45s ease;
+  z-index: 1350;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  transition: 0.45s cubic-bezier(0.22, 0.9, 0.3, 1);
-  z-index: 1350;
 }
 
 .nim-overlay.open {
   height: 100%;
 }
 
-/* Mobile Nav Links (Correct Order) */
 .nim-overlay-links {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  opacity: 0;
-  transform: translateY(40px);
-  animation: fadeSlide 0.6s ease forwards 0.3s;
-}
-
-@keyframes fadeSlide {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  text-align: center;
 }
 
 .nim-overlay-links a {
   font-size: 1.8rem;
-  text-decoration: none;
-  color: #0b3b36;
   font-weight: 600;
-  transition: 0.2s ease;
+  color: #0b3b36;
+  text-decoration: none;
 }
 
-.nim-overlay-links a:hover {
-  color: #00bda6;
-  transform: scale(1.05);
+/* MOBILE PRODUCTS */
+.nim-mobile-dropdown {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #0b3b36;
+  cursor: pointer;
 }
 
-/* Enroll Button - Mobile */
-.nim-overlay-links .nim-enroll-btn-mobile {
-  background: linear-gradient(135deg, #00bda6 0%, #0b3b36 100%);
-  color: white !important;
+.nim-mobile-submenu {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* MOBILE ENROLL */
+.nim-enroll-btn-mobile {
+  background: linear-gradient(135deg, #00bda6, #0b3b36);
+  color: #fff !important;
   padding: 14px 32px;
   border-radius: 30px;
   margin-top: 20px;
-  display: inline-block;
-  box-shadow: 0 6px 16px rgba(0, 189, 166, 0.3);
 }
 
-.nim-overlay-links .nim-enroll-btn-mobile:hover {
-  background: linear-gradient(135deg, #0b3b36 0%, #00bda6 100%);
-  transform: scale(1.08);
-  box-shadow: 0 8px 20px rgba(0, 189, 166, 0.4);
-}
-
-/* Close Button */
+/* CLOSE */
 .nim-close-btn {
   position: absolute;
   top: 25px;
@@ -165,10 +216,9 @@ body {
   background: none;
   border: none;
   cursor: pointer;
-  color: #0b3b36;
 }
 
-/* ========= BACKDROP ========= */
+/* BACKDROP */
 .nim-backdrop {
   position: fixed;
   inset: 0;
@@ -184,7 +234,9 @@ body {
   pointer-events: auto;
 }
 
-/* ========= RESPONSIVE ========= */
+/* =============================
+   RESPONSIVE
+============================= */
 @media (max-width: 992px) {
   .nim-nav-links {
     display: none;
@@ -195,28 +247,14 @@ body {
   }
 
   .nim-navbar {
-    padding: 0 28px;
     height: 70px;
-  }
-
-  .nim-nav-logo img {
-    height: 46px;
-  }
-}
-
-@media (max-width: 768px) {
-  .nim-overlay-links a {
-    font-size: 1.6rem;
+    padding: 0 28px;
   }
 }
 
 @media (max-width: 480px) {
   .nim-navbar {
     padding: 0 20px;
-  }
-
-  .nim-nav-logo img {
-    height: 40px;
   }
 
   .nim-overlay-links a {

@@ -83,6 +83,11 @@ import Enroll from "./components/Enroll";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
+import Heroseo from "./SEOnew/Hero";
+import Perfect from "./SEOnew/perfect";
+import HowItWorksSeo from "./SEOnew/HowItWorks";
+import TestimonialSeo from "./SEOnew/ProblemSolution";
+
 
 /* ===========================================================
    MAIN APP ROUTES
@@ -286,6 +291,23 @@ function App() {
             </>
           }
         />
+
+
+       <Route
+  path="/seosection"
+  element={
+    <>
+      <Heroseo />
+      <TestimonialSeo />
+        <HowItWorksSeo />
+      <Perfect />
+    
+      
+      <Footer />
+    </>
+  }
+/>
+
 
       </Routes>
     </Router>
