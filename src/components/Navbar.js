@@ -109,13 +109,13 @@ const Navbar = () => {
             className="nim-mobile-dropdown"
             onClick={() => setIsProductsOpen(!isProductsOpen)}
           >
-            Products {isProductsOpen ? "−" : "+"}
+            Products {isProductsOpen ? "−" : "▾"}
           </button>
 
           {isProductsOpen && (
             <div className="nim-mobile-submenu">
-              <a href="/seosection" onClick={closeMenu}>NIM Book</a>
-               <a href="/seosection" onClick={closeMenu}>NIM Book</a>
+              <a href="/seosection" onClick={closeMenu}>NIM chat</a>
+               <a href="/nimbook" onClick={closeMenu}>NIM Book</a>
             </div>
           )}
 
