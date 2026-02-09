@@ -58,10 +58,12 @@
   cursor: pointer;
   font-weight: 600;
 }
-
-.hero-btn:hover {
-  background: #00e6c3;
+.hero-link {
+  text-decoration: none;
 }
+
+
+
 
 /* =============================
    HERO NOTE (ONE-TIME SETUP)

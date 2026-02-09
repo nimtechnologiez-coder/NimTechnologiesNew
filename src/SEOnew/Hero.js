@@ -20,7 +20,10 @@ const Hero = () => {
             WhatsApp Business.
           </p>
 
-          <button className="hero-btn">Install Now</button>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfGNC9Mi3c3DjEaGtzPSGUG3Z5MZpA2dd_ryvgi8dfe3gERjg/viewform?usp=publish-editor" className="hero-link">
+  <button className="hero-btn">Install Now</button>
+</a>
+
 
           <span className="hero-note">
   
