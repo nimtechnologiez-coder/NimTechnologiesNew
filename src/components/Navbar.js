@@ -70,7 +70,7 @@ const Navbar = () => {
                 isProductsOpen ? "show" : ""
               }`}
             >
-              <a href="/seosection">Nim Chat</a>
+              <a href="/seosection">SEO Automation</a>
                <a href="/nimbook" onClick={closeMenu}>NIM Book</a>
             
             </div>
@@ -114,7 +114,7 @@ const Navbar = () => {
 
           {isProductsOpen && (
             <div className="nim-mobile-submenu">
-              <a href="/seosection" onClick={closeMenu}>NIM chat</a>
+              <a href="/seosection" onClick={closeMenu}>SEO Automation</a>
                <a href="/nimbook" onClick={closeMenu}>NIM Book</a>
             </div>
           )}
