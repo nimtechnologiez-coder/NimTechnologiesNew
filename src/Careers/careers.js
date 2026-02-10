@@ -3,7 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 import "../style/careers.css";
-import bgImage from "../careerimages/careershero.png";
+import bgImage from "../images/careerherogpt.png";
 import bgbutton from "../careerimages/careerbuttonhero.png";
 
 const Careers = () => {

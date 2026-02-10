@@ -4,7 +4,7 @@ import "aos/dist/aos.css";
 import "../style/ServicesHero.css";
 
 import bgbutton from "../images/serbutton.png";
-import bgImage from "../images/servicehero.png";
+import bgImage from "../images/sevicegpt.png";
 
 const ServiceHero = () => {
   useEffect(() => {

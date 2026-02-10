@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../style/HeroSection.css"; // ✅ Updated unique CSS name
-import heroBg from "../images/homehero.png"; // 🖼️ Import background image
+import heroBg from "../images/homesnim.png"; // 🖼️ Import background image
 
 const HeroSection = () => {
   useEffect(() => {

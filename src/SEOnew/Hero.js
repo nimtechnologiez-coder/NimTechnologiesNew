@@ -1,5 +1,5 @@
 import "../style/Hero.css";
-import heroBg from "../images/back.png";
+import heroBg from "../images/seogpt.png";
 
 const Hero = () => {
   return (

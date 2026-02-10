@@ -1,6 +1,6 @@
 import React from "react";
 import "../style/Nimbook.css";
-import heroBg from "../images/image-1 1.jpg";
+import heroBg from "../images/productgpt.png";
 import featureImg from "../images/tablet_image 1.png"; // Update path to your features image
 import cardBg from "../images/Rectangle-34625110.jpg";
 import cardBg2 from "../images/Rectangle-34625111 1.png";
