@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../style/contactushero.css";
-import heroBg from "../careerimages/contacthero.png";
+import heroBg from "../careerimages/contactsnims.png";
 
 const HeroSectionn = () => {
   useEffect(() => {
