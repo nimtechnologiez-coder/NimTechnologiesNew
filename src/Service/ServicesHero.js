@@ -3,8 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "../style/ServicesHero.css";
 
-import bgbutton from "../images/serbutton.png";
-import bgImage from "../images/sevicegpt.png";
+import bgImage from "../images/servicebro.png";
 
 const ServiceHero = () => {
   useEffect(() => {
@@ -17,22 +16,17 @@ const ServiceHero = () => {
 
   return (
     <section
-      className="career-hero"
+      className="service-hero"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
-      <div className="career-overlay">
+      <div className="service-overlay">
         <div
-          className="career-content"
+          className="service-content"
           data-aos="fade-left"        // SLIDE FROM RIGHT
           data-aos-delay="200"
         >
-          <img
-            src={bgbutton}
-            alt="Career Button"
-            className="career-button"
-            data-aos="fade-left"
-            data-aos-delay="400"     // BUTTON DELAYED SLIDE ANIMATION
-          />
+        <span className="services-hero-btn">Our Services</span>
+
 
           <h1 data-aos="fade-left" data-aos-delay="600">
             Innovative Tech Services <br /> Built for Tomorrow

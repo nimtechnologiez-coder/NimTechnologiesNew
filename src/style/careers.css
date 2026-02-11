@@ -23,10 +23,30 @@
 }
 
 /* ====== CAREERS BUTTON IMAGE ====== */
+/* Button */
+.careers-hero-btn {
+  background: linear-gradient(to right, #cafff3, #7ef3dd);
+  color: #000;
+  font-size: 48px;          /* ↑ from 1rem (16px) */
+  font-weight: 600;
+  line-height: 1.2;
+
+  padding: 16px 40px;       /* ↑ more breathing room */
+  border: none;
+  border-radius: 32px;
+  margin-bottom: 45px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
+}
+
+
+
 .careers-button {
-  width: 180px;
-  height: 40px;
-  margin-bottom: 25px;
+  width: 280px;
+  height: 80px;
+  margin-bottom: -25px;
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
@@ -38,13 +58,15 @@
 /* ====== HEADING TEXT ====== */
 .careers-content h1 {
   font-family: "Poppins", sans-serif;
-  font-size: 2.8rem;
+  font-size: 56px;
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1.25;
   color: #ffffff;
   text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
   margin: 0;
 }
+
+
 
 /* ===============================
    📱 RESPONSIVE DESIGN
@@ -103,3 +125,46 @@
   }
 }
 
+/* ====== HEADING TEXT ====== */
+.careers-content h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 56px; /* increased from 2.8rem */
+  font-weight: 700;
+  line-height: 1.25;
+  color: #ffffff;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  margin: 0;
+}
+
+/* ===============================
+   📱 RESPONSIVE DESIGN
+   =============================== */
+
+/* Desktop: ≥ 1200px */
+@media (min-width: 1200px) {
+  .careers-content h1 {
+    font-size: 90px;
+  }
+}
+
+/* Laptop: 1025px–1199px */
+@media (max-width: 1199px) and (min-width: 1025px) {
+  .careers-content h1 {
+    font-size: 48px;
+  }
+}
+
+/* Tablet: 769px–1024px */
+@media (max-width: 1024px) and (min-width: 769px) {
+  .careers-content h1 {
+    font-size: 38px;
+  }
+}
+
+/* Mobile: ≤ 768px */
+@media (max-width: 768px) {
+  .careers-content h1 {
+    font-size: 28px;
+    line-height: 1.3;
+  }
+}

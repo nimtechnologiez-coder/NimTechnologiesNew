@@ -3,7 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 
 import "../style/careers.css";
-import bgImage from "../images/careerherogpt.png";
+import bgImage from "../images/careersgpt.png";
 import bgbutton from "../careerimages/careerbuttonhero.png";
 
 const Careers = () => {
@@ -27,13 +27,8 @@ const Careers = () => {
           data-aos-delay="50"
         >
           {/* BUTTON */}
-          <img
-            src={bgbutton}
-            alt="Careers Button"
-            className="careers-button"
-            data-aos="fade-left"
-            data-aos-delay="200"
-          />
+                  <span className="about-hero-btn">Careers</span>
+
 
           {/* HEADING */}
           <h1 data-aos="fade-left" data-aos-delay="400">

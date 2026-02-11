@@ -1,90 +1,157 @@
-/* ===== HERO SECTION ===== */
+/* =====================================================
+   HERO SECTION – FULLY BALANCED RESPONSIVE VERSION
+===================================================== */
+
+/* HERO WRAPPER */
 .nimbook-hero .hero-img-wrapper {
   position: relative;
-  width: 100vw;
-  max-width: 100%;
-  aspect-ratio: 2.1/1;
-  min-height: 240px;
-  overflow: hidden;
+  width: 100%;
+  min-height: 600px;              /* stable desktop base */
+  height: 75vh;                   /* scales nicely */
+  max-height: 820px;              /* prevents giant 4K stretch */
   border-radius: 18px;
+  overflow: hidden;
   background: #e6f5fa;
+  
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
 }
 
+/* BACKGROUND IMAGE */
 .nimbook-hero .hero-bg-img {
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 100vw;
+  inset: 0;
+  width: 100%;
   height: 100%;
-  min-height: 240px;
   object-fit: cover;
-  object-position: center;
   z-index: 1;
 }
 
+.nimbook-hero{
+  margin-top: 70px;
+}
+/* HERO CONTENT */
 .nimbook-hero .hero-overlay-content {
-  position: absolute;
-  left: 5vw;
-  top: 3vw;
+  position: relative;
   z-index: 2;
-  color: #fff;
-  text-align: left;
-  width: 90vw;
-  max-width: 700px;
-  padding-right: 1.5vw;
+
+  width: 100%;
+  max-width: 1200px;       /* 🔥 important for desktop balance */
+  margin: 0 auto;          /* center container */
+  padding-left: 80px;      /* fixed desktop spacing */
+
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  gap: 30px;
+
+  color: #ffffff;
+  text-align: left;
 }
 
+/* TEXT WRAPPER (prevents too-wide text on 4K) */
+.nimbook-hero .hero-text {
+  max-width: 720px;
+}
+
+/* MAIN HEADING */
 .nimbook-hero h1 {
-  font-family: 'Poppins', Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 600;
-  font-size: 5.2rem;
-  margin-bottom: 0.5rem;
-  letter-spacing: 1.2px;
+  font-size: clamp(2.4rem, 3.5vw, 4.8rem);
   line-height: 1.1;
-  padding-top: 70px;
+  margin: 0;
 }
 
-@media (max-width: 380px) {
-
-  .nimbook-hero h1 {
-    font-size: 2.2rem !important;     /* Perfect mobile size */
-    line-height: 1.25 !important;     /* Better spacing */
-    letter-spacing: 0.5px !important; /* Reduce wide spacing */
-    margin-left: 4.8rem !important;
-    padding-top: 50px !important;     /* Prevent overflow */
-    text-align: center !important;    /* Center for small screens */
-  }
-
-  .hero-subtitle{
-     margin-left: 6.8rem !important;
-  }
-
-  
-}
-
-    
-  
-.nimbook-hero .book-text {
-  font-family: 'Poppins', Arial, sans-serif;
-  font-weight: 600;
-  color: #3ee0b8;
-}
-
+/* SUBTITLE */
 .hero-subtitle {
-  font-family: 'Montserrat', Arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: 3.1rem;
-  line-height: 1.20;
-  max-width: 650px;
-  margin-bottom: 0.1rem;
-  text-shadow: 0 2px 8px rgba(40,60,90,0.18);
+  font-size: clamp(2.1rem, 2.8vw, 3.4rem);
+  line-height: 1.35;
+  margin: 0;
 }
+
+/* BUTTON */
+.product-hero-btn {
+  background: linear-gradient(to right, #cafff3, #7ef3dd);
+  color: #000;
+  font-size: clamp(2rem, 1.2vw, 1.6rem);
+  font-weight: 600;
+  padding: 14px 36px;
+  border: none;
+  width: fit-content;
+  border-radius: 32px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.product-hero-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
+}
+
+/* =====================================================
+   LARGE LAPTOP ADJUSTMENT (1400px and below)
+===================================================== */
+
+@media (max-width: 1400px) {
+  .nimbook-hero .hero-overlay-content {
+    padding-left: 60px;
+  }
+}
+
+/* =====================================================
+   SMALL LAPTOP / TABLET
+===================================================== */
+
+@media (max-width: 1024px) {
+
+  .nimbook-hero .hero-img-wrapper {
+    height: auto;
+    min-height: 520px;
+  }
+
+  .nimbook-hero .hero-overlay-content {
+    padding-left: 40px;
+  }
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+
+  .nimbook-hero .hero-img-wrapper {
+    min-height: 520px;
+    justify-content: center;
+    padding: 0 20px;
+  }
+
+  .nimbook-hero .hero-overlay-content {
+    padding-left: 0;
+    text-align: center;
+    align-items: center;
+  }
+
+  .nimbook-hero{
+    height: auto;
+    margin-top: 70px;
+  }
+  .nimbook-hero .hero-text {
+    max-width: 100%;
+  }
+
+}
+
+
+
+
+
+
+
+
+
 
 /* FLAGSHIP SECTION */
 .flagship-section {

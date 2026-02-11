@@ -34,7 +34,7 @@ const HeroSection = () => {
           <span className="unique-highlight">We Engineer What’s Next.</span>
         </p>
 
-        <button className="unique-hero-btn">Explore Our World</button>
+        <span className="unique-hero-btn">Explore Our World</span>
       </div>
     </section>
   );

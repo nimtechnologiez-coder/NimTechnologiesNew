@@ -1,6 +1,6 @@
 import React from "react";
 import "../style/Nimbook.css";
-import heroBg from "../images/productgpt.png";
+import heroBg from "../images/nimbookbro.png";
 import featureImg from "../images/tablet_image 1.png"; // Update path to your features image
 import cardBg from "../images/Rectangle-34625110.jpg";
 import cardBg2 from "../images/Rectangle-34625111 1.png";
@@ -26,14 +26,14 @@ return(
     <div className="nimbook-hero" data-aos="fade-up">
       <div className="hero-img-wrapper">
         <div className="hero-overlay-content">
-          <h1>
-            Nim <span className="book-text">Books</span>
-          </h1>
+          
           <p  className="hero-subtitle">
             Comprehensive <br />
-            accounting software for <br />
-            growing businesses
+            accounting software <br />
+            for growing businesses
           </p>
+                            <button className="product-hero-btn">Access Now</button>
+
         </div>
         <img src={heroBg} alt="" className="hero-bg-img" />
       </div>

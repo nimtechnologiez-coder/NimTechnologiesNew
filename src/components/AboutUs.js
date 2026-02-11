@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../style/AboutUs.css";
-import heroBg from "../images/Abouthead.jpg";
+import heroBg from "../images/aboutbro.png";
 
 const About = () => {
   const sectionRef = useRef(null);
@@ -40,12 +40,12 @@ const About = () => {
       <div className="about-overlay"></div>
 
       <div className="container text-center about-content">
-        <button ref={buttonRef} className="about-badge mb-4">
-          About Our Company
-        </button>
+        
+        <span className="about-hero-btn">About</span>
+
 
         <h2 ref={headingRef} className="fw-semibold">
-          Innovation is not just our goal <br />— it’s our identity
+          Innovation is not just <br /> our goal — it’s our <br/> identity
         </h2>
       </div>
     </section>
