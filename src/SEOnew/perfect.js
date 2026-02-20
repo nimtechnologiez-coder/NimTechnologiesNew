@@ -67,8 +67,8 @@ const PerfectBusiness = () => {
 
         <div className="pb-feature">
           <i className="bi bi-tag"></i>
-          <p>₹7,999</p>
-          <span>one-time</span>
+          {/* <p>₹7,999</p> */}
+          <p>Get Know More</p>
         </div>
       </div>
 
