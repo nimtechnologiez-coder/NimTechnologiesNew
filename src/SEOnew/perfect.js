@@ -52,25 +52,26 @@ const PerfectBusiness = () => {
       </div>
 
       {/* ===== ICON FEATURES ===== */}
-      <div className="pb-features">
-        <div className="pb-feature">
-          <i className="bi bi-clock"></i>
-          <p>Install Time</p>
-          <span>30 Minutes</span>
-        </div>
+      {/* ===== ICON FEATURES ===== */}
+<div className="pb-features">
+  <div className="pb-feature">
+    <i className="bi bi-clock"></i>
+    <p>Install Time</p>
+    <span>30 Minutes</span>
+  </div>
 
-        <div className="pb-feature">
-          <i className="bi bi-calendar-check"></i>
-          <p>Live on the</p>
-          <span>Same Day</span>
-        </div>
+  <div className="pb-feature">
+    <i className="bi bi-calendar-check"></i>
+    <p>Live on the</p>
+    <span>Same Day</span>
+  </div>
 
-        <div className="pb-feature">
-          <i className="bi bi-tag"></i>
-          {/* <p>₹7,999</p> */}
-          <p>Get Know More</p>
-        </div>
-      </div>
+  <div className="pb-feature">
+    <i className="bi bi-shield-lock"></i>
+    <p>Secure Setup</p>
+    <span>100% Safe</span>
+  </div>
+</div>
 
       {/* ===== CURVED CTA BOX (EXACT FORMAT) ===== */}
       <div className="pb-cta-wrapper">
