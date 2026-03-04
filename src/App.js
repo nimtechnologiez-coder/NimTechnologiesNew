@@ -88,6 +88,12 @@ import Perfect from "./SEOnew/perfect";
 import HowItWorksSeo from "./SEOnew/HowItWorks";
 import TestimonialSeo from "./SEOnew/ProblemSolution";
 
+/* -----------------------------------------
+   PLACEMENT PAGES
+----------------------------------------- */
+import PlacementRegistration from "./pages/PlacementRegistration";
+import AdminPlacementDashboard from "./pages/AdminPlacementDashboard";
+
 
 /* ===========================================================
    MAIN APP ROUTES
@@ -293,21 +299,26 @@ function App() {
         />
 
 
-       <Route
-  path="/seosection"
-  element={
-    <>
-      <Heroseo />
-      <TestimonialSeo />
-        <HowItWorksSeo />
-      <Perfect />
-    
-      
-      <Footer />
-    </>
-  }
-/>
+        <Route
+          path="/seosection"
+          element={
+            <>
+              <Heroseo />
+              <TestimonialSeo />
+              <HowItWorksSeo />
+              <Perfect />
 
+
+              <Footer />
+            </>
+          }
+        />
+
+        {/* =======================
+            PLACEMENT DRIVE 2026
+        ========================== */}
+        <Route path="/placement-registration" element={<><PlacementRegistration /><Footer /></>} />
+        <Route path="/admin/placements" element={<AdminPlacementDashboard />} />
 
       </Routes>
     </Router>
