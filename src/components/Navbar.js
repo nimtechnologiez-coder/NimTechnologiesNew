@@ -56,6 +56,7 @@ const Navbar = () => {
           <a href="/">Home</a>
           <a href="/about">About</a>
           <a href="/service">Services</a>
+          <a href="/company">What We have done</a>
 
           {/* PRODUCTS DROPDOWN (HOVER SAFE) */}
           <div
@@ -66,13 +67,12 @@ const Navbar = () => {
             <span className="nim-dropdown-btn">Products ▾</span>
 
             <div
-              className={`nim-dropdown-menu ${
-                isProductsOpen ? "show" : ""
-              }`}
+              className={`nim-dropdown-menu ${isProductsOpen ? "show" : ""
+                }`}
             >
               <a href="/seosection">SEO Automation</a>
-               <a href="/nimbook" onClick={closeMenu}>NIM Book</a>
-            
+              <a href="/nimbook" onClick={closeMenu}>NIM Book</a>
+
             </div>
           </div>
 
@@ -103,6 +103,7 @@ const Navbar = () => {
           <a href="/" onClick={closeMenu}>Home</a>
           <a href="/about" onClick={closeMenu}>About</a>
           <a href="/service" onClick={closeMenu}>Services</a>
+          <a href="/company" onClick={closeMenu}>Company</a>
 
           {/* MOBILE PRODUCTS */}
           <button
@@ -115,7 +116,7 @@ const Navbar = () => {
           {isProductsOpen && (
             <div className="nim-mobile-submenu">
               <a href="/seosection" onClick={closeMenu}>SEO Automation</a>
-               <a href="/nimbook" onClick={closeMenu}>NIM Book</a>
+              <a href="/nimbook" onClick={closeMenu}>NIM Book</a>
             </div>
           )}
 

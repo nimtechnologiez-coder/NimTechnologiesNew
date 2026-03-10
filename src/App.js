@@ -94,6 +94,13 @@ import TestimonialSeo from "./SEOnew/ProblemSolution";
 import PlacementRegistration from "./pages/PlacementRegistration";
 import AdminPlacementDashboard from "./pages/AdminPlacementDashboard";
 
+/* -----------------------------------------
+   COMPANY PAGE COMPONENTS
+----------------------------------------- */
+import CompanyHero from "./Company/CompanyHero";
+import CompanyWhatWeDo from "./Company/CompanyWhatWeDo";
+import CompanyIndustries from "./Company/CompanyIndustries";
+
 
 /* ===========================================================
    MAIN APP ROUTES
@@ -319,6 +326,21 @@ function App() {
         ========================== */}
         <Route path="/placement-registration" element={<><PlacementRegistration /><Footer /></>} />
         <Route path="/admin/placements" element={<AdminPlacementDashboard />} />
+
+        {/* =======================
+            COMPANY PAGE
+        ========================== */}
+        <Route
+          path="/company"
+          element={
+            <>
+              <CompanyHero />
+              <CompanyWhatWeDo />
+              <CompanyIndustries />
+              <Footer />
+            </>
+          }
+        />
 
       </Routes>
     </Router>
