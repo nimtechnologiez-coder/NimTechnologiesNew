@@ -1,0 +1,154 @@
+/* =========================================
+   MISSION & VISION SECTION  –  AboutMissionVision.css
+   ========================================= */
+
+.amv-section {
+    background: #ffffff;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ---- TOP BADGE ---- */
+.amv-top-badge {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.amv-badge {
+    display: inline-block;
+    background: linear-gradient(90deg, #b3fff2 0%, #ffffff 100%);
+    color: #004c44;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 10px 28px;
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(0, 166, 147, 0.2);
+    letter-spacing: 0.5px;
+}
+
+/* ---- SHARED CARD ---- */
+.amv-card {
+    border-radius: 24px;
+    padding: 48px 40px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.amv-card:hover {
+    transform: translateY(-8px);
+}
+
+/* ---- MISSION CARD ---- */
+.amv-card-mission {
+    background: linear-gradient(145deg, #0c1e3b 0%, #0f2d50 100%);
+    box-shadow: 8px 8px 0px #aef5e9;
+    color: #fff;
+}
+
+/* ---- VISION CARD ---- */
+.amv-card-vision {
+    background: linear-gradient(145deg, #00a693 0%, #00796b 100%);
+    box-shadow: 8px 8px 0px #b3fff2;
+    color: #fff;
+}
+
+/* ---- ICON ---- */
+.amv-card-icon {
+    font-size: 3rem;
+    margin-bottom: 16px;
+}
+
+/* ---- HEADING ---- */
+.amv-card-heading {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 14px;
+}
+
+/* ---- DIVIDER ---- */
+.amv-divider {
+    width: 60px;
+    height: 4px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.45);
+    margin-bottom: 20px;
+}
+
+/* ---- TEXT ---- */
+.amv-card-text {
+    font-size: 1rem;
+    line-height: 1.85;
+    color: rgba(255, 255, 255, 0.88);
+    margin-bottom: 22px;
+}
+
+.amv-highlight {
+    font-weight: 700;
+    color: #aef5e9;
+}
+
+/* ---- LIST ---- */
+.amv-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.amv-list li {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+    font-size: 0.88rem;
+    font-weight: 600;
+    padding: 6px 16px;
+    border-radius: 30px;
+    backdrop-filter: blur(4px);
+}
+
+/* ---- ANIMATIONS ---- */
+.amv-fade-left {
+    opacity: 0;
+    transform: translateX(-70px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.amv-fade-right {
+    opacity: 0;
+    transform: translateX(70px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.amv-animate {
+    opacity: 1;
+    transform: translate(0, 0);
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 992px) {
+    .amv-card {
+        padding: 38px 28px;
+    }
+
+    .amv-card-heading {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .amv-card {
+        padding: 30px 22px;
+    }
+
+    .amv-card-heading {
+        font-size: 1.45rem;
+    }
+
+    .amv-card-icon {
+        font-size: 2.4rem;
+    }
+}

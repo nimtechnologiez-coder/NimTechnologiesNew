@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Helmet } from "react-helmet";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
@@ -16,27 +17,37 @@ const Careers = () => {
   }, []);
 
   return (
-    <section
-      className="careers-hero"
-      style={{ backgroundImage: `url(${bgImage})` }}
-    >
-      <div className="careers-overlay">
-        <div
-          className="careers-content"
-          data-aos="fade-left"
-          data-aos-delay="50"
-        >
-          {/* BUTTON */}
-                  <span className="about-hero-btn">Careers</span>
+    <>
+      <Helmet>
+        <title>Careers at NIM Technologies | Join Our Team &amp; Grow</title>
+        <meta
+          name="description"
+          content="Grow your IT career in AI, cloud, development, and digital innovation by investigating career opportunities at NIM Technologies."
+        />
+      </Helmet>
+
+      <section
+        className="careers-hero"
+        style={{ backgroundImage: `url(${bgImage})` }}
+      >
+        <div className="careers-overlay">
+          <div
+            className="careers-content"
+            data-aos="fade-left"
+            data-aos-delay="50"
+          >
+            {/* BUTTON */}
+            <span className="about-hero-btn">Careers</span>
 
 
-          {/* HEADING */}
-          <h1 data-aos="fade-left" data-aos-delay="400">
-            Build the Future with <br /> Nim Technologies
-          </h1>
+            {/* HEADING */}
+            <h1 data-aos="fade-left" data-aos-delay="400">
+              Build the Future with <br /> Nim Technologies
+            </h1>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

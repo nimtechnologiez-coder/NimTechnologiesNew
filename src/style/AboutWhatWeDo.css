@@ -1,0 +1,119 @@
+/* =========================================
+   WHAT WE DO SECTION  –  AboutWhatWeDo.css
+   Color palette matches existing About UI:
+   • Dark:      #0c1e3b
+   • Teal:      #00a693  /  #00796b
+   • Teal-light:#aef5e9  /  #b3fff2
+   • Font:      Poppins
+   ========================================= */
+
+.awd-section {
+    background: #ffffff;
+    font-family: "Poppins", sans-serif;
+}
+
+/* ---- HEADER ---- */
+.awd-header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.awd-badge {
+    display: inline-block;
+    background: linear-gradient(90deg, #b3fff2 0%, #ffffff 100%);
+    color: #004c44;
+    font-weight: 700;
+    font-size: 0.95rem;
+    padding: 10px 28px;
+    border-radius: 50px;
+    box-shadow: 0 4px 12px rgba(0, 166, 147, 0.2);
+    letter-spacing: 0.5px;
+    margin-bottom: 18px;
+}
+
+.awd-title {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #0c1e3b;
+    margin-bottom: 16px;
+}
+
+.awd-highlight {
+    color: #00a693;
+}
+
+.awd-intro {
+    font-size: 1.05rem;
+    color: #555;
+    line-height: 1.85;
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+/* ---- CARDS ---- */
+.awd-card {
+    background: #fff;
+    border: 2px solid #00a693;
+    border-radius: 20px;
+    padding: 36px 28px;
+    height: 100%;
+    box-shadow: 6px 6px 0px #b2e9df;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    text-align: center;
+}
+
+.awd-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 10px 10px 0px #91e3d4;
+}
+
+.awd-icon {
+    font-size: 2.8rem;
+    margin-bottom: 18px;
+}
+
+.awd-card-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #0c1e3b;
+    margin-bottom: 10px;
+}
+
+.awd-card-text {
+    font-size: 0.98rem;
+    color: #555;
+    line-height: 1.75;
+}
+
+/* ---- ANIMATIONS ---- */
+.awd-fade-up {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.awd-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+    .awd-title {
+        font-size: 2rem;
+    }
+
+    .awd-intro {
+        font-size: 0.97rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .awd-title {
+        font-size: 1.7rem;
+    }
+
+    .awd-card {
+        padding: 28px 20px;
+    }
+}

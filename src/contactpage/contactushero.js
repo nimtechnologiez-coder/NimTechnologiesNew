@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { Helmet } from "react-helmet";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../style/contactushero.css";
@@ -14,25 +15,35 @@ const HeroSectionn = () => {
   }, []);
 
   return (
-    <section
-      className="unique-hero-section"
-      style={{ backgroundImage: `url(${heroBg})` }}
-    >
-      {/* Overlay */}
-      <div className="unique-hero-overlay"></div>
+    <>
+      <Helmet>
+        <title>Contact NIM Technologies | Get in Touch for Support</title>
+        <meta
+          name="description"
+          content="Contact NIM Technologies for support, quotes, inquiries and partnership opportunities in web, cloud, AI and digital solutions."
+        />
+      </Helmet>
 
-      {/* Content */}
-      <div className="unique-hero-content" data-aos="fade-up">
-        <h1 className="unique-hero-title">
-          Get In <span>Touch</span>
-        </h1>
+      <section
+        className="unique-hero-section"
+        style={{ backgroundImage: `url(${heroBg})` }}
+      >
+        {/* Overlay */}
+        <div className="unique-hero-overlay"></div>
 
-        <p className="unique-hero-desc">
-          Want to get in touch? We’d love to hear from you — <br />
-          <span className="unique-highlight">here’s how you can reach us</span>
-        </p>
-      </div>
-    </section>
+        {/* Content */}
+        <div className="unique-hero-content" data-aos="fade-up">
+          <h1 className="unique-hero-title">
+            Get In <span>Touch</span>
+          </h1>
+
+          <p className="unique-hero-desc">
+            Want to get in touch? We’d love to hear from you — <br />
+            <span className="unique-highlight">here’s how you can reach us</span>
+          </p>
+        </div>
+      </section>
+    </>
   );
 };
 

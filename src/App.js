@@ -21,6 +21,9 @@ import NextAtNim from "./Homepage/NextAtNim";
 ----------------------------------------- */
 import AboutUs from "./components/AboutUs";
 import AboutWhoWeAre from "./components/AboutWhoWeAre";
+import AboutWhatWeDo from "./components/AboutWhatWeDo";
+import AboutWhyChooseUs from "./components/AboutWhyChooseUs";
+import AboutMissionVision from "./components/AboutMissionVision";
 import CeoSection from "./components/CeoSection";
 import TeamSection from "./components/TeamSection";
 import TeamVisionSection from "./components/TeamVisionSection";
@@ -162,6 +165,9 @@ function App() {
             <>
               <AboutUs />
               <AboutWhoWeAre />
+              <AboutWhatWeDo />
+              <AboutWhyChooseUs />
+              <AboutMissionVision />
               <CeoSection />
               <TeamSection />
               <TeamVisionSection />

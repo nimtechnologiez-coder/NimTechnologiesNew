@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from "react";
+import { Helmet } from "react-helmet";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "../style/AboutUs.css";
 import heroBg from "../images/aboutbro.png";
@@ -32,23 +33,33 @@ const About = () => {
   }, []);
 
   return (
-    <section
-      ref={sectionRef}
-      className="about-hero-section d-flex justify-content-center align-items-center"
-      style={{ backgroundImage: `url(${heroBg})` }}
-    >
-      <div className="about-overlay"></div>
+    <>
+      <Helmet>
+        <title>About NIM Technologies | Digital Innovation</title>
+        <meta
+          name="description"
+          content="Discover NIM Technologies and our expertise in AI, cloud and digital innovation that drives business success."
+        />
+      </Helmet>
 
-      <div className="container text-center about-content">
-        
-        <span className="about-hero-btn">About</span>
+      <section
+        ref={sectionRef}
+        className="about-hero-section d-flex justify-content-center align-items-center"
+        style={{ backgroundImage: `url(${heroBg})` }}
+      >
+        <div className="about-overlay"></div>
+
+        <div className="container text-center about-content">
+
+          <span className="about-hero-btn">About</span>
 
 
-        <h2 ref={headingRef} className="fw-semibold">
-          Innovation is not just <br /> our goal — it’s our <br/> identity
-        </h2>
-      </div>
-    </section>
+          <h2 ref={headingRef} className="fw-semibold">
+            Innovation is not just <br /> our goal — it’s our <br /> identity
+          </h2>
+        </div>
+      </section>
+    </>
   );
 };
 
