@@ -56,7 +56,7 @@ const Navbar = () => {
           <a href="/">Home</a>
           <a href="/about">About</a>
           <a href="/service">Services</a>
-          <a href="/company">What We have done</a>
+          <a href="/company">Industries</a>
 
           {/* PRODUCTS DROPDOWN (HOVER SAFE) */}
           <div
@@ -103,7 +103,7 @@ const Navbar = () => {
           <a href="/" onClick={closeMenu}>Home</a>
           <a href="/about" onClick={closeMenu}>About</a>
           <a href="/service" onClick={closeMenu}>Services</a>
-          <a href="/company" onClick={closeMenu}>Company</a>
+          <a href="/company" onClick={closeMenu}>Industries</a>
 
           {/* MOBILE PRODUCTS */}
           <button
