@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 /* -----------------------------------------
    HOME PAGE COMPONENTS
@@ -111,6 +112,9 @@ import CompanyIndustries from "./Company/CompanyIndustries";
 function App() {
   return (
     <Router>
+      <Helmet>
+        <meta name="google-site-verification" content="d5-lD1ram5j452qIS6y7-EO34n6UufHH5KCrzlpuDRE" />
+      </Helmet>
       <Navbar />
 
       <Routes>

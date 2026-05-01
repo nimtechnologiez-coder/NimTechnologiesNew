@@ -22,6 +22,7 @@ const HeroSection = () => {
           name="description"
           content="NIM Technologies offers AI, cloud, data analytics, digital marketing &amp; custom web/app development to grow your business faster."
         />
+        <meta name="google-site-verification" content="d5-lD1ram5j452qIS6y7-EO34n6UufHH5KCrzlpuDRE" />
       </Helmet>
 
       <section
