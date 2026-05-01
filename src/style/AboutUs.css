@@ -21,7 +21,7 @@
 
   margin-top: 140px;        /* below navbar */
   margin-right: 300px;     /* keeps text away from right visuals */
-  padding-left: 96px;      /* LEFT REFERENCE LINE */
+  padding-left: 95px;      /* LEFT REFERENCE LINE */
 
   display: flex;
   flex-direction: column;
